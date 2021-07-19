@@ -9,8 +9,8 @@
 			stackingCapacity: 128,
 			transferQuantity: 1,
 			bulkTransferQuantity: 8,
-			collisionBox: { x1: 16, y1: 0, z1: 0, x2: 1, y2: 0.25, z2: 1 },
-			cbScaleYByLayer: 0.07 }
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.12, z2: 1 },
+			cbScaleYByLayer: 0.062 }
 		} ]
 	},
 ]
