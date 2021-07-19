@@ -7,3 +7,4 @@
 ## Roadmap
 - Stick pile
 - Wax pile
+- Chains pile
