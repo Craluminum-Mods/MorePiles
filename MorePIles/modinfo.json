@@ -3,7 +3,7 @@
 	"name": "MorePiles",
 	"modid": "morepiles",
 	"version": "1.0.0",
-	"side": "server",
+	"side": "universal",
 
 	"description": "Adds bone pile",
 	"website": "https://github.com/Craluminum2413/MorePiles",
