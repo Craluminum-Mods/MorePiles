@@ -1,0 +1,30 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [
+      {
+        "name": "GroundStorable",
+        "properties": {
+          "layout": "Stacking",
+          "placeRemoveSound": "morepiles:sounds/beeswaxpile",
+          "stackingModel": "morepiles:shapes/beeswaxpile",
+          "collisionBox": {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0,
+            "x2": 1,
+            "y2": 0.091,
+            "z2": 1
+          },
+          "cbScaleYByLayer": 0.0825,
+          "tessQuantityElements": 51,
+          "stackingCapacity": 132,
+          "transferQuantity": 1,
+          "bulkTransferQuantity": 12
+        }
+      }
+    ],
+    "file": "game:itemtypes/resource/beeswax.json"
+  }
+]

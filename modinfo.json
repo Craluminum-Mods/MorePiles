@@ -1,0 +1,18 @@
+{
+  "Type": 1,
+  "TextureSize": 32,
+  "Name": "More Piles",
+  "Version": "1.0.1",
+  "NetworkVersion": null,
+  "Description": "Adds piles for bone, beeswax and metal chain",
+  "Website": "https://github.com/Craluminum2413/MorePiles",
+  "ModID": "morepiles",
+  "Authors": [
+    "Craluminum2413"
+  ],
+  "Contributors": [],
+  "Side": "Universal",
+  "RequiredOnClient": true,
+  "RequiredOnServer": true,
+  "Dependencies": { "game": "1.15.0" }
+}
