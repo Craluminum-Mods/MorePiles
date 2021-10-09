@@ -7,5 +7,3 @@ This mod adds piles using new [GroundStorable](https://www.vintagestory.at/blog.
 |Beeswax     |132 |~51 |~6732 |
 |Metal chain |16  |47  |725   |
 |Bone        |128 |5   |640   |
-## Roadmap
-- Stick pile (use [Stacks](https://mods.vintagestory.at/show/mod/271) mod before it will be added)
