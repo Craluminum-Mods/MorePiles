@@ -7,3 +7,4 @@ Adds piles using new [GroundStorable](https://www.vintagestory.at/blog.html/news
 |Beeswax     |132 |~51 |~6732 |
 |Metal chain |16  |47  |725   |
 |Bone        |128 |5   |640   |
+|Stick       |128 |6   |768   |
