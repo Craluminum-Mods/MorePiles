@@ -1,4 +1,4 @@
-﻿using Vintagestory.API.Common;
+using Vintagestory.API.Common;
 
 [assembly: ModInfo( "MorePiles",
 	Description = "Adds piles for some items and blocks",
@@ -57,41 +57,41 @@ namespace MorePiles
 			api.World.Config.SetBool("MPtrapdoor", MorePilesConfig.Loaded.PileTrapdoor);
 			api.World.Config.SetBool("MPtroughlarge", MorePilesConfig.Loaded.PileTroughLarge);
 			api.World.Config.SetBool("MPtroughsmall", MorePilesConfig.Loaded.PileTroughSmall);
-	}
+		}
 
-	public class MorePilesConfig
-	{
-		public static MorePilesConfig Loaded { get; set; } = new MorePilesConfig();
-		public bool PileAngledGear { get; set; } = true;
-		public bool PileAxle { get; set; } = true;
-		public bool PileBambooStakes { get; set; } = true;
-		public bool PileBeeswax { get; set; } = true;
-		public bool PileBone { get; set; } = true;
-		public bool PileChuteSection { get; set; } = true;
-		public bool PileCloth { get; set; } = true;
-		public bool PileCookingPotBurnt { get; set; } = false;
-		public bool PileDryStoneFence { get; set; } = true;
-		public bool PileFenceGateWooden { get; set; } = true;
-		public bool PileFenceWooden { get; set; } = true;
-		public bool PileFlaxFibers { get; set; } = true;
-		public bool PileFlaxTwine { get; set; } = true;
-		public bool PileFlowepotBurnt { get; set; } = false;
-		public bool PileHenbox { get; set; } = true;
-		public bool PileIronFence { get; set; } = true;
-		public bool PileLadder { get; set; } = true;
-		public bool PileMetalChain { get; set; } = true;
-		public bool PileMetalLamellae { get; set; } = true;
-		public bool PileMetalScales { get; set; } = true;
-		public bool PilePainting { get; set; } = true;
-		public bool PileSign { get; set; } = true;
-		public bool PileStick { get; set; } = true;
-		public bool PileSticksLayer { get; set; } = true;
-		public bool PileStone { get; set; } = false;
-		public bool PileToolrack { get; set; } = true;
-		public bool PileTorchholder { get; set; } = true;
-		public bool PileTrapdoor { get; set; } = true;
-		public bool PileTroughLarge { get; set; } = true;
-		public bool PileTroughSmall { get; set; } = true;
+		public class MorePilesConfig
+		{
+			public static MorePilesConfig Loaded { get; set; } = new MorePilesConfig();
+			public bool PileAngledGear { get; set; } = true;
+			public bool PileAxle { get; set; } = true;
+			public bool PileBambooStakes { get; set; } = true;
+			public bool PileBeeswax { get; set; } = true;
+			public bool PileBone { get; set; } = true;
+			public bool PileChuteSection { get; set; } = true;
+			public bool PileCloth { get; set; } = true;
+			public bool PileCookingPotBurnt { get; set; } = false;
+			public bool PileDryStoneFence { get; set; } = true;
+			public bool PileFenceGateWooden { get; set; } = true;
+			public bool PileFenceWooden { get; set; } = true;
+			public bool PileFlaxFibers { get; set; } = true;
+			public bool PileFlaxTwine { get; set; } = true;
+			public bool PileFlowepotBurnt { get; set; } = false;
+			public bool PileHenbox { get; set; } = true;
+			public bool PileIronFence { get; set; } = true;
+			public bool PileLadder { get; set; } = true;
+			public bool PileMetalChain { get; set; } = true;
+			public bool PileMetalLamellae { get; set; } = true;
+			public bool PileMetalScales { get; set; } = true;
+			public bool PilePainting { get; set; } = true;
+			public bool PileSign { get; set; } = true;
+			public bool PileStick { get; set; } = true;
+			public bool PileSticksLayer { get; set; } = true;
+			public bool PileStone { get; set; } = false;
+			public bool PileToolrack { get; set; } = true;
+			public bool PileTorchholder { get; set; } = true;
+			public bool PileTrapdoor { get; set; } = true;
+			public bool PileTroughLarge { get; set; } = true;
+			public bool PileTroughSmall { get; set; } = true;
 		}
 	}
 }
