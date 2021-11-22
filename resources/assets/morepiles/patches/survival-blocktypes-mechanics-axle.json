@@ -1,0 +1,36 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "morepiles:sounds/stickpile",
+        "stackingModel": "morepiles:shapes/axlepile",
+        "tessQuantityElements": 2,
+        "stackingCapacity": 16,
+        "transferQuantity": 1,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0,
+          "y1": 0,
+          "z1": 0,
+          "x2": 1,
+          "y2": 0.25,
+          "z2": 1
+        },
+        "cbScaleYByLayer": 0.25
+      }
+    },
+    "file": "game:blocktypes/mechanics/axle.json",
+    "condition": { "when": "MPaxle", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*-ud"],
+    "file": "game:blocktypes/mechanics/axle.json",
+    "condition": { "when": "MPaxle", "isValue": "true" }
+  }
+]

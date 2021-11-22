@@ -1,0 +1,38 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [
+      {
+        "name": "GroundStorable",
+        "properties": {
+          "layout": "Stacking",
+          "placeRemoveSound": "morepiles:sounds/stickpile",
+          "stackingModel": "morepiles:shapes/clothpile",
+          "tessQuantityElements": 4,
+          "stackingCapacity": 12,
+          "transferQuantity": 1,
+          "bulkTransferQuantity": 2,
+          "collisionBox": {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0,
+            "x2": 1,
+            "y2": 0.2,
+            "z2": 1
+          },
+          "cbScaleYByLayer": 0.4062
+        }
+      }
+    ],
+    "file": "game:itemtypes/resource/cloth.json",
+    "condition": { "when": "MPcloth", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*"],
+    "file": "game:itemtypes/resource/cloth.json",
+    "condition": { "when": "MPcloth", "isValue": "true" }
+  }
+]

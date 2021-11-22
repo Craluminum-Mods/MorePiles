@@ -1,0 +1,42 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "morepiles:sounds/stickpile",
+        "stackingModelByType": {
+          "*-wood-*": "morepiles:shapes/ladderpile",
+          "*-rope-*": "morepiles:shapes/ropeladderpile"
+        },
+        "tessQuantityElementsByType": {
+          "*-wood-*": 5,
+          "*-rope-*": 11
+        },
+        "stackingCapacity": 64,
+        "transferQuantity": 1,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0.125,
+          "y1": 0,
+          "z1": 0.125,
+          "x2": 0.875,
+          "y2": 0.125,
+          "z2": 0.875
+        },
+        "cbScaleYByLayer": 0.125
+      }
+    },
+    "file": "game:blocktypes/wood/ladder.json",
+    "condition": { "when": "MPladder", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["@*-(wood|rope)-north"],
+    "file": "game:blocktypes/wood/ladder.json",
+    "condition": { "when": "MPladder", "isValue": "true" }
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "morepiles:sounds/stickpile",
+        "stackingModel": "morepiles:shapes/drystonefencepile",
+        "tessQuantityElements": 14,
+        "stackingCapacity": 32,
+        "transferQuantity": 1,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0,
+          "y1": 0,
+          "z1": 0,
+          "x2": 1,
+          "y2": 0.1428,
+          "z2": 1
+        },
+        "cbScaleYByLayer": 0.2
+      }
+    },
+    "file": "game:blocktypes/stone/drystonefence.json",
+    "condition": { "when": "MPdrystonefence", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*-ew-free"],
+    "file": "game:blocktypes/stone/drystonefence.json",
+    "condition": { "when": "MPdrystonefence", "isValue": "true" }
+  }
+]

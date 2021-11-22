@@ -1,0 +1,38 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [
+      {
+        "name": "GroundStorable",
+        "properties": {
+          "layout": "Stacking",
+          "placeRemoveSound": "morepiles:sounds/stickpile",
+          "stackingModel": "morepiles:shapes/lamellaepile",
+          "tessQuantityElements": 16,
+          "stackingCapacity": 16,
+          "transferQuantity": 1,
+          "bulkTransferQuantity": 4,
+          "collisionBox": {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0,
+            "x2": 1,
+            "y2": 0.125,
+            "z2": 1
+          },
+          "cbScaleYByLayer": 0.125
+        }
+      }
+    ],
+    "file": "itemtypes/resource/metallamellae.json",
+    "condition": { "when": "MPmetallamellae", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*"],
+    "file": "game:itemtypes/resource/stick.json",
+    "condition": { "when": "MPmetallamellae", "isValue": "true" }
+  }
+]
