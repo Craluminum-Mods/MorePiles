@@ -9,8 +9,8 @@
           "layout": "Stacking",
           "placeRemoveSound": "sounds/block/ceramicplace",
           "stackingModel": "morepiles:shapes/stonepile256",
-          "tessQuantityElements": 1,
-          "stackingCapacity": 256,
+          "tessQuantityElements": 4,
+          "stackingCapacity": 64,
           "transferQuantity": 1,
           "bulkTransferQuantity": 8,
           "collisionBox": {
@@ -18,10 +18,10 @@
             "y1": 0,
             "z1": 0,
             "x2": 1,
-            "y2": 0.0625,
+            "y2": 0.125,
             "z2": 1
           },
-          "cbScaleYByLayer": 0.0625
+          "cbScaleYByLayer": 0.125
         }
       }
     ],
