@@ -14,12 +14,12 @@
           "transferQuantity": 1,
           "bulkTransferQuantity": 4,
           "collisionBox": {
-            "x1": 0.3125,
+            "x1": 0.125,
             "y1": 0,
-            "z1": 0.2127,
-            "x2": 0.6875,
+            "z1": 0.125,
+            "x2": 0.875,
             "y2": 0.125,
-            "z2": 0.781
+            "z2": 0.875
           },
           "cbScaleYByLayer": 0.125
         }

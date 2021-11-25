@@ -1,0 +1,39 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [
+      {
+        "name": "GroundStorable",
+        "properties": {
+          "layout": "Stacking",
+          "placeRemoveSound": "morepiles:sounds/beeswaxpile",
+          "stackingModel": "morepiles:shapes/honeycombpile",
+          "tessQuantityElements": 1,
+          "stackingCapacity": 64,
+          "transferQuantity": 1,
+          "bulkTransferQuantity": 4,
+          "collisionBox": {
+            "x1": 0.3125,
+            "y1": 0,
+            "z1": 0.3125,
+            "x2": 0.6875,
+            "y2": 0.125,
+            "z2": 0.6875
+          },
+          "cbScaleYByLayer": 0.125
+        }
+      }
+    ],
+    "file": "game:itemtypes/resource/honeycomb.json",
+    "condition": { "when": "MPhoneycomb", "isValue": "true" }
+    
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*"],
+    "file": "game:itemtypes/resource/honeycomb.json",
+    "condition": { "when": "MPhoneycomb", "isValue": "true" }
+  }
+]

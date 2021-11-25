@@ -7,17 +7,17 @@
         "name": "GroundStorable",
         "properties": {
           "layout": "Stacking",
-          "placeRemoveSound": "morepiles:sounds/stickpile",
+          "placeRemoveSound": "morepiles:sounds/metalchainpile",
           "stackingModel": "morepiles:shapes/lamellaepile",
           "tessQuantityElements": 16,
           "stackingCapacity": 16,
           "transferQuantity": 1,
           "bulkTransferQuantity": 4,
           "collisionBox": {
-            "x1": 0,
+            "x1": 0.094,
             "y1": 0,
             "z1": 0,
-            "x2": 1,
+            "x2": 0.906,
             "y2": 0.0625,
             "z2": 1
           },
@@ -25,7 +25,7 @@
         }
       }
     ],
-    "file": "itemtypes/resource/metallamellae.json",
+    "file": "game:itemtypes/resource/metallamellae.json",
     "condition": { "when": "MPmetallamellae", "isValue": "true" }
   },
   {
