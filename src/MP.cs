@@ -1,6 +1,6 @@
 ﻿using Vintagestory.API.Common;
 
-[assembly: ModInfo( "MorePiles",
+[assembly: ModInfo( "MorePiles", Version = "1.1.2",
 	Description = "Adds piles for some items and blocks",
 	Website     = "https://github.com/Craluminum2413/MorePiles",
 	Authors     = new []{ "Craluminum2413" } )]
