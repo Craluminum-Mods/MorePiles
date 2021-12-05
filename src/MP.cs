@@ -2,8 +2,9 @@
 
 [assembly: ModInfo( "MorePiles", Version = "1.1.2",
 	Description = "Adds piles for some items and blocks",
-	Website     = "https://github.com/Craluminum2413/MorePiles",
-	Authors     = new []{ "Craluminum2413" } )]
+		IconPath = "modicon.png",
+		Website     = "https://github.com/Craluminum2413/MorePiles",
+		Authors     = new []{ "Craluminum2413" } )]
 
 namespace MorePiles
 {

@@ -18,5 +18,15 @@
 		"type": "process",
 		"command": "dotnet",
 		"args": [ "build", "-c", "Release" ]
+	},
+	{
+		"label": "Build (ReleaseToMods)",
+		"group": "build",
+		"presentation": { "reveal": "silent" },
+		"problemMatcher": "$msCompile",
+		
+		"type": "process",
+		"command": "dotnet",
+		"args": [ "build", "-c", "ReleaseToMods" ]
 	}]
 }
