@@ -24,13 +24,13 @@
       }
     },
     "file": "game:blocktypes/metal/torchholder.json",
-    "condition": { "when": "MPtorchholder", "isValue": "true" }
+    "condition": { "when": "PileTorchholderIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-empty-north"],
     "file": "game:blocktypes/metal/torchholder.json",
-    "condition": { "when": "MPtorchholder", "isValue": "true" }
+    "condition": { "when": "PileTorchholderIsEnabled", "isValue": "true" }
   }
 ]

@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/metalchain.json",
-    "condition": { "when": "MPmetalchain", "isValue": "true" }
+    "condition": { "when": "PileMetalChainIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/metalchain.json",
-    "condition": { "when": "MPmetalchain", "isValue": "true" }
+    "condition": { "when": "PileMetalChainIsEnabled", "isValue": "true" }
   }
 ]

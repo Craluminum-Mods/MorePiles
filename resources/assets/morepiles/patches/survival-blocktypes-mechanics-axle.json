@@ -24,13 +24,13 @@
       }
     },
     "file": "game:blocktypes/mechanics/axle.json",
-    "condition": { "when": "MPaxle", "isValue": "true" }
+    "condition": { "when": "PileAxleIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-ud"],
     "file": "game:blocktypes/mechanics/axle.json",
-    "condition": { "when": "MPaxle", "isValue": "true" }
+    "condition": { "when": "PileAxleIsEnabled", "isValue": "true" }
   }
 ]

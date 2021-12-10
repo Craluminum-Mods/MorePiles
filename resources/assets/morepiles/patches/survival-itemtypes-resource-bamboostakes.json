@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/bamboostakes.json",
-    "condition": { "when": "MPbamboostakes", "isValue": "true" }
+    "condition": { "when": "PileBambooStakesIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/bamboostakes.json",
-    "condition": { "when": "MPbamboostakes", "isValue": "true" }
+    "condition": { "when": "PileBambooStakesIsEnabled", "isValue": "true" }
   }
 ]

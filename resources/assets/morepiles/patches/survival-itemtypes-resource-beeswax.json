@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/beeswax.json",
-    "condition": { "when": "MPbeeswax", "isValue": "true" }
+    "condition": { "when": "PileBeeswaxIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/beeswax.json",
-    "condition": { "when": "MPbeeswax", "isValue": "true" }
+    "condition": { "when": "PileBeeswaxIsEnabled", "isValue": "true" }
   }
 ]

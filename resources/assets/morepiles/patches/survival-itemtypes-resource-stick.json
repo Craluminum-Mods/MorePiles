@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/stick.json",
-    "condition": { "when": "MPstick", "isValue": "true" }
+    "condition": { "when": "PileStickIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/stick.json",
-    "condition": { "when": "MPstick", "isValue": "true" }
+    "condition": { "when": "PileStickIsEnabled", "isValue": "true" }
   }
 ]

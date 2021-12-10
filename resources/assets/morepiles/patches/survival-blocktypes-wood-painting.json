@@ -24,13 +24,13 @@
       }
     },
     "file": "game:blocktypes/wood/painting.json",
-    "condition": { "when": "MPpainting", "isValue": "true" }
+    "condition": { "when": "PilePaintingIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-north"],
     "file": "game:blocktypes/wood/painting.json",
-    "condition": { "when": "MPpainting", "isValue": "true" }
+    "condition": { "when": "PilePaintingIsEnabled", "isValue": "true" }
   }
 ]

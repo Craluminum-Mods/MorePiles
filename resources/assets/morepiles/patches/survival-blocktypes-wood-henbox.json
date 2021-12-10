@@ -24,13 +24,13 @@
       }
     },
     "file": "game:blocktypes/wood/henbox.json",
-    "condition": { "when": "MPhenbox", "isValue": "true" }
+    "condition": { "when": "PileHenboxIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:blocktypes/wood/henbox.json",
-    "condition": { "when": "MPhenbox", "isValue": "true" }
+    "condition": { "when": "PileHenboxIsEnabled", "isValue": "true" }
   }
 ]

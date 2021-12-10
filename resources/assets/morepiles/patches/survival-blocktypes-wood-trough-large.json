@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:blocktypes/wood/trough-large.json",
-    "condition": { "when": "MPtroughlarge", "isValue": "true" }
+    "condition": { "when": "PileTroughLargeIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-head-north"],
     "file": "game:blocktypes/wood/trough-large.json",
-    "condition": { "when": "MPtroughlarge", "isValue": "true" }
+    "condition": { "when": "PileTroughLargeIsEnabled", "isValue": "true" }
   }
 ]
