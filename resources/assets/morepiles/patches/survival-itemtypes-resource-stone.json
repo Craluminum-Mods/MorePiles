@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/stone.json",
-    "condition": { "when": "MPstone", "isValue": "true" }
+    "condition": { "when": "PileStoneIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/stone.json",
-    "condition": { "when": "MPstone", "isValue": "true" }
+    "condition": { "when": "PileStoneIsEnabled", "isValue": "true" }
   }
 ]

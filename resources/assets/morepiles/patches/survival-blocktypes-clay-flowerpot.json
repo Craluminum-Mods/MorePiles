@@ -24,13 +24,13 @@
       }
     },
     "file": "game:blocktypes/clay/flowerpot.json",
-    "condition": { "when": "MPflowerpotburnt", "isValue": "true" }
+    "condition": { "when": "PileFlowerpotBurntIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:blocktypes/clay/flowerpot.json",
-    "condition": { "when": "MPflowerpotburnt", "isValue": "true" }
+    "condition": { "when": "PileFlowerpotBurntIsEnabled", "isValue": "true" }
   }
 ]

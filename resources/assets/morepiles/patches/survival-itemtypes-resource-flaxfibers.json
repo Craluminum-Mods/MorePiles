@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/flaxfibers.json",
-    "condition": { "when": "MPflaxfibers", "isValue": "true" }
+    "condition": { "when": "PileFlaxFibersIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/flaxfibers.json",
-    "condition": { "when": "MPflaxfibers", "isValue": "true" }
+    "condition": { "when": "PileFlaxFibersIsEnabled", "isValue": "true" }
   }
 ]

@@ -30,13 +30,13 @@
       }
     },
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "MPladder", "isValue": "true" }
+    "condition": { "when": "PileLadderIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["@*-(wood|rope)-north"],
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "MPladder", "isValue": "true" }
+    "condition": { "when": "PileLadderIsEnabled", "isValue": "true" }
   }
 ]

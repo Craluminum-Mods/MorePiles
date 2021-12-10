@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/metallamellae.json",
-    "condition": { "when": "MPmetallamellae", "isValue": "true" }
+    "condition": { "when": "PileMetalLamellaeIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/stick.json",
-    "condition": { "when": "MPmetallamellae", "isValue": "true" }
+    "condition": { "when": "PileMetalLamellaeIsEnabled", "isValue": "true" }
   }
 ]

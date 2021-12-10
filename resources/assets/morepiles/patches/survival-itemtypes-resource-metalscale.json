@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/metalscale.json",
-    "condition": { "when": "MPmetalscales", "isValue": "true" }
+    "condition": { "when": "PileMetalScalesIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/stick.json",
-    "condition": { "when": "MPmetalscales", "isValue": "true" }
+    "condition": { "when": "PileMetalScalesIsEnabled", "isValue": "true" }
   }
 ]

@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:blocktypes/wood/stickslayer.json",
-    "condition": { "when": "MPstickslayer", "isValue": "true" }
+    "condition": { "when": "PileSticksLayerIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-ew-free"],
     "file": "game:blocktypes/wood/stickslayer.json",
-    "condition": { "when": "MPstickslayer", "isValue": "true" }
+    "condition": { "when": "PileSticksLayerIsEnabled", "isValue": "true" }
   }
 ]

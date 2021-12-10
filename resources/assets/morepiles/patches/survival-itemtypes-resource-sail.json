@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/sail.json",
-    "condition": { "when": "MPsail", "isValue": "true" }
+    "condition": { "when": "PileSailIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/sail.json",
-    "condition": { "when": "MPsail", "isValue": "true" }
+    "condition": { "when": "PileSailIsEnabled", "isValue": "true" }
   }
 ]

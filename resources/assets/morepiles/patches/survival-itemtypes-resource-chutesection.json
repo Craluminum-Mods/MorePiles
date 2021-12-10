@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/chutesection.json",
-    "condition": { "when": "MPchutesection", "isValue": "true" }
+    "condition": { "when": "PileChuteSectionIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/chutesection.json",
-    "condition": { "when": "MPchutesection", "isValue": "true" }
+    "condition": { "when": "PileChuteSectionIsEnabled", "isValue": "true" }
   }
 ]

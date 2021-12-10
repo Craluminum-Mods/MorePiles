@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/cloth.json",
-    "condition": { "when": "MPcloth", "isValue": "true" }
+    "condition": { "when": "PileClothIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/cloth.json",
-    "condition": { "when": "MPcloth", "isValue": "true" }
+    "condition": { "when": "PileClothIsEnabled", "isValue": "true" }
   }
 ]

@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:itemtypes/resource/ironbloom.json",
-    "condition": { "when": "MPironbloom", "isValue": "true" }
+    "condition": { "when": "PileIronBloomIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/ironbloom.json",
-    "condition": { "when": "MPironbloom", "isValue": "true" }
+    "condition": { "when": "PileIronBloomIsEnabled", "isValue": "true" }
   }
 ]

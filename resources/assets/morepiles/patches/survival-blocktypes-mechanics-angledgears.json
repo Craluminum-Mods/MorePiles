@@ -26,13 +26,13 @@
       }
     ],
     "file": "game:blocktypes/mechanics/angledgears.json",
-    "condition": { "when": "MPangledgear", "isValue": "true" }
+    "condition": { "when": "PileAngledGearIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-s"],
     "file": "game:blocktypes/mechanics/angledgears.json",
-    "condition": { "when": "MPangledgear", "isValue": "true" }
+    "condition": { "when": "PileAngledGearIsEnabled", "isValue": "true" }
   }
 ]

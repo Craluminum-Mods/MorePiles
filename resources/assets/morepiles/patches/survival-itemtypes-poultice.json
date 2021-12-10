@@ -29,13 +29,13 @@
       }
     ],
     "file": "game:itemtypes/poultice.json",
-    "condition": { "when": "MPpoultice", "isValue": "true" }
+    "condition": { "when": "PilePoulticeIsEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/poultice.json",
-    "condition": { "when": "MPpoultice", "isValue": "true" }
+    "condition": { "when": "PilePoulticeIsEnabled", "isValue": "true" }
   }
 ]
