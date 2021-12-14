@@ -7,7 +7,7 @@
   "description": "Adds piles for some items and blocks",
   "website": "https://github.com/Craluminum2413/MorePiles",
   "authors": [ "Craluminum2413" ],
-  "contributors": [ "Apache" ],
+  "contributors": [ "Apache", "rar61" ],
 
   "dependencies": {
   "game": "1.15.0"

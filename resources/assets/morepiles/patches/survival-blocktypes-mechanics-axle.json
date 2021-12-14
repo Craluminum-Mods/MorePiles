@@ -7,7 +7,7 @@
       "properties": {
         "layout": "Stacking",
         "placeRemoveSound": "morepiles:sounds/stickpile",
-        "stackingModel": "morepiles:shapes/axlepile",
+        "stackingModel": "morepiles:shapes/axlepile16",
         "tessQuantityElements": 2,
         "stackingCapacity": 16,
         "transferQuantity": 1,

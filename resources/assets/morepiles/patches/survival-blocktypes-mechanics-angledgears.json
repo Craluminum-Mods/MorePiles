@@ -8,7 +8,7 @@
         "properties": {
           "layout": "Stacking",
           "placeRemoveSound": "morepiles:sounds/stickpile",
-          "stackingModel": "morepiles:shapes/angledgearpile320",
+          "stackingModel": "morepiles:shapes/angledgearpile32",
           "tessQuantityElements": 10,
           "stackingCapacity": 32,
           "transferQuantity": 1,
@@ -34,5 +34,14 @@
     "value": ["*-s"],
     "file": "game:blocktypes/mechanics/angledgears.json",
     "condition": { "when": "PileAngledGearIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "value": 4,
+    "file": "game:blocktypes/mechanics/angledgears.json",
+    "condition": { "when": "PileAngledGearStackingCapacity", "isValue": 4 }
   }
+  
 ]
