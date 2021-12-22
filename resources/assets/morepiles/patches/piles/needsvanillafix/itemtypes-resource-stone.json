@@ -3,7 +3,7 @@
     "op": "add",
     "path": "/behaviorsByType/*",
     "value": [{
-    "name": "GroundStorable",
+      "name": "GroundStorable",
       "properties": {
         "layout": "Stacking",
         "placeRemoveSound": "sounds/block/ceramicplace",
@@ -28,7 +28,7 @@
     "op": "add",
     "path": "/behaviorsByType/*-chalk",
     "value": [{
-    "name": "GroundStorable",
+      "name": "GroundStorable",
       "properties": {
         "layout": "Stacking",
         "placeRemoveSound": "sounds/block/ceramicplace",
