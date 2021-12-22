@@ -1,0 +1,36 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/ceramicplace",
+        "stackingModel": "morepiles:shapes/flowerpotpile",
+        "tessQuantityElements": 5,
+        "stackingCapacity": 8,
+        "transferQuantity": 1,
+        "bulkTransferQuantity": 1,
+        "collisionBox": {
+          "x1": 0,
+          "y1": 0,
+          "z1": 0,
+          "x2": 1,
+          "y2": 0.25,
+          "z2": 1
+        },
+        "cbScaleYByLayer": 0.5
+      }
+    },
+    "file": "game:blocktypes/clay/flowerpot.json",
+    "condition": { "when": "PileFlowerpotBurntIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*"],
+    "file": "game:blocktypes/clay/flowerpot.json",
+    "condition": { "when": "PileFlowerpotBurntIsEnabled", "isValue": "true" }
+  }
+]

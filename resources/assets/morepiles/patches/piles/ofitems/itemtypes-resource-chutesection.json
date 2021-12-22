@@ -1,0 +1,41 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [{
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/chute",
+        "stackingModel": "morepiles:shapes/chutesectionpile_8",
+        "tessQuantityElements": 4,
+        "stackingCapacity": 64,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0,
+          "y1": 0,
+          "z1": 0,
+          "x2": 1,
+          "y2": 1,
+          "z2": 1
+        }
+      }
+    }],
+    "file": "game:itemtypes/resource/chutesection.json",
+    "condition": { "when": "PileChuteSectionIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*"],
+    "file": "game:itemtypes/resource/chutesection.json",
+    "condition": { "when": "PileChuteSectionIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "game:itemtypes/resource/chutesection.json",
+    "condition": { "when": "PileChuteSectionStackingCapacity", "useValue": true }
+  }
+]

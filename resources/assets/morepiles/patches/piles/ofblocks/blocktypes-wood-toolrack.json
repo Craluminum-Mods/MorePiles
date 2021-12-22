@@ -1,0 +1,41 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors/0",
+    "value": {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/stickplace",
+        "stackingModel": "morepiles:shapes/toolrackpile_16",
+        "tessQuantityElements": 8,
+        "stackingCapacity": 64,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0.1628,
+          "y1": 0,
+          "z1": 0.1565,
+          "x2": 0.8435,
+          "y2": 1,
+          "z2": 0.8435
+        }
+      }
+    },
+    "file": "game:blocktypes/wood/toolrack.json",
+    "condition": { "when": "PileToolrackIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*-north"],
+    "file": "game:blocktypes/wood/toolrack.json",
+    "condition": { "when": "PileToolrackIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "game:blocktypes/wood/toolrack.json",
+    "condition": { "when": "PileToolrackStackingCapacity", "useValue": true }
+  }
+]

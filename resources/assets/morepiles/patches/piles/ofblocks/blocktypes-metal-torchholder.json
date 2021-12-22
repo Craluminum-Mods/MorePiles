@@ -1,0 +1,41 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors/0",
+    "value": {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/ingot",
+        "stackingModel": "morepiles:shapes/torchholderpile_8",
+        "tessQuantityElements": 5,
+        "stackingCapacity": 8,
+        "bulkTransferQuantity": 2,
+        "collisionBox": {
+          "x1": 0.188,
+          "y1": 0,
+          "z1": 0.188,
+          "x2": 0.812,
+          "y2": 1,
+          "z2": 0.812
+        }
+      }
+    },
+    "file": "game:blocktypes/metal/torchholder.json",
+    "condition": { "when": "PileTorchholderIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*-empty-north"],
+    "file": "game:blocktypes/metal/torchholder.json",
+    "condition": { "when": "PileTorchholderIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "game:blocktypes/metal/torchholder.json",
+    "condition": { "when": "PileTorchholderStackingCapacity", "useValue": true }
+  }
+]

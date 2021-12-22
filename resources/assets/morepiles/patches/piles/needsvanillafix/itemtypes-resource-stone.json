@@ -1,0 +1,72 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*",
+    "value": [{
+    "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/ceramicplace",
+        "stackingModel": "morepiles:shapes/stonepile_32",
+        "tessQuantityElements": 1,
+        "stackingCapacity": 64,
+        "bulkTransferQuantity": 8,
+        "collisionBox": {
+          "x1": 0.1565,
+          "y1": 0,
+          "z1": 0.219,
+          "x2": 0.8435,
+          "y2": 1,
+          "z2": 0.781
+        }
+      }
+    }],
+    "file": "game:itemtypes/resource/stone.json",
+    "condition": { "when": "PileStoneIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*-chalk",
+    "value": [{
+    "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/ceramicplace",
+        "stackingModel": "morepiles:shapes/stonepile_32",
+        "tessQuantityElements": 1,
+        "stackingCapacity": 64,
+        "bulkTransferQuantity": 8,
+        "collisionBox": {
+          "x1": 0.1565,
+          "y1": 0,
+          "z1": 0.219,
+          "x2": 0.8435,
+          "y2": 1,
+          "z2": 0.781
+        }
+      }
+    }],
+    "file": "game:itemtypes/resource/stone.json",
+    "condition": { "when": "PileStoneIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*"],
+    "file": "game:itemtypes/resource/stone.json",
+    "condition": { "when": "PileStoneIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviorsByType/*/0/properties/stackingCapacity",
+    "file": "game:itemtypes/resource/stone.json",
+    "condition": { "when": "PileStoneStackingCapacity", "useValue": true }
+  },
+  {
+    "op": "replace",
+    "path": "/behaviorsByType/*-chalk/0/properties/stackingCapacity",
+    "file": "game:itemtypes/resource/stone.json",
+    "condition": { "when": "PileStoneStackingCapacity", "useValue": true }
+  }
+]

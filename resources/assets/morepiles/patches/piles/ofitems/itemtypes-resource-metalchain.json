@@ -1,0 +1,41 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [{
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/wearable/chain1",
+        "stackingModel": "morepiles:shapes/metalchainpile_16",
+        "tessQuantityElements": 94,
+        "stackingCapacity": 8,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0.125,
+          "y1": 0,
+          "z1": 0.0315,
+          "x2": 0.875,
+          "y2": 1,
+          "z2": 0.9685
+        }
+      }
+    }],
+    "file": "game:itemtypes/resource/metalchain.json",
+    "condition": { "when": "PileMetalChainIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*"],
+    "file": "game:itemtypes/resource/metalchain.json",
+    "condition": { "when": "PileMetalChainIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "game:itemtypes/resource/metalchain.json",
+    "condition": { "when": "PileMetalChainStackingCapacity", "useValue": true }
+  }
+]

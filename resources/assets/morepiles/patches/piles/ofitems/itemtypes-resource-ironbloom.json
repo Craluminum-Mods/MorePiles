@@ -1,0 +1,41 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [{
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/loosestone1",
+        "stackingModel": "morepiles:shapes/ironbloompile_4",
+        "tessQuantityElements": 9,
+        "stackingCapacity": 64,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0.3125,
+          "y1": 0,
+          "z1": 0.375,
+          "x2": 0.6875,
+          "y2": 1,
+          "z2": 0.625
+        }
+      }
+    }],
+    "file": "game:itemtypes/resource/ironbloom.json",
+    "condition": { "when": "PileIronBloomIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*"],
+    "file": "game:itemtypes/resource/ironbloom.json",
+    "condition": { "when": "PileIronBloomIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "game:itemtypes/resource/ironbloom.json",
+    "condition": { "when": "PileIronBloomStackingCapacity", "useValue": true }
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors/0",
+    "value": {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/stickplace",
+        "stackingModel": "morepiles:shapes/troughsmallpile_4",
+        "tessQuantityElements": 5,
+        "stackingCapacity": 64,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0.0625,
+          "y1": 0,
+          "z1": 0.25,
+          "x2": 0.9375,
+          "y2": 1,
+          "z2": 0.75
+        }
+      }
+    },
+    "file": "game:blocktypes/wood/trough-small.json",
+    "condition": { "when": "PileTroughSmallIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*-ns"],
+    "file": "game:blocktypes/wood/trough-small.json",
+    "condition": { "when": "PileTroughSmallIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "game:blocktypes/wood/trough-small.json",
+    "condition": { "when": "PileTroughSmallStackingCapacity", "useValue": true }
+  }
+]

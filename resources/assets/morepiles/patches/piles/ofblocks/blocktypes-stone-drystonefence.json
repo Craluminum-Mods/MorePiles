@@ -1,0 +1,41 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors/0",
+    "value": {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/loosestone1",
+        "stackingModel": "morepiles:shapes/drystonefencepile_8",
+        "tessQuantityElements": 14,
+        "stackingCapacity": 64,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0.25,
+          "y1": 0,
+          "z1": 0.25,
+          "x2": 0.75,
+          "y2": 1,
+          "z2": 0.75
+        }
+      }
+    },
+    "file": "game:blocktypes/stone/drystonefence.json",
+    "condition": { "when": "PileFenceDryStoneIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*-ew-free"],
+    "file": "game:blocktypes/stone/drystonefence.json",
+    "condition": { "when": "PileFenceDryStoneIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "game:blocktypes/stone/drystonefence.json",
+    "condition": { "when": "PileFenceDryStoneStackingCapacity", "useValue": true }
+  }
+]

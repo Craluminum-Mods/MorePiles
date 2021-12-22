@@ -1,0 +1,44 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [{
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/stickplace",
+        "stackingModel": "morepiles:shapes/troughlargepile_4",
+        "tessQuantityElements": 18,
+        "stackingCapacity": 64,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0.125,
+          "y1": 0,
+          "z1": 0.3125,
+          "x2": 0.875,
+          "y2": 1,
+          "z2": 0.6875
+        }
+      }
+    }],
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "condition": { "when": "PileTroughLargeIsEnabled", "isValue": "true" },
+    "dependsOn": [{"modid": "vanvar"}]
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*-head-north"],
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "condition": { "when": "PileTroughLargeIsEnabled", "isValue": "true" },
+    "dependsOn": [{"modid": "vanvar"}]
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "vanvar:blocktypes/wood/trough-large.json",
+    "condition": { "when": "PileTroughLargeStackingCapacity", "useValue": true },
+    "dependsOn": [{"modid": "vanvar"}]
+  }
+]

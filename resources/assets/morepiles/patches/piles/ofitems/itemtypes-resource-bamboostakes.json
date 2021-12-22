@@ -1,0 +1,41 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [{
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/stickplace",
+        "stackingModel": "morepiles:shapes/bamboostakespile_32",
+        "tessQuantityElements": 1,
+        "stackingCapacity": 32,
+        "bulkTransferQuantity": 8,
+        "collisionBox": {
+          "x1": 0.344,
+          "y1": 0,
+          "z1": 0.344,
+          "x2": 0.656,
+          "y2": 1,
+          "z2": 0.656
+        }
+      }
+    }],
+    "file": "game:itemtypes/resource/bamboostakes.json",
+    "condition": { "when": "PileBambooStakesIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*"],
+    "file": "game:itemtypes/resource/bamboostakes.json",
+    "condition": { "when": "PileBambooStakesIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "game:itemtypes/resource/bamboostakes.json",
+    "condition": { "when": "PileBambooStakesStackingCapacity", "useValue": true }
+  }
+]

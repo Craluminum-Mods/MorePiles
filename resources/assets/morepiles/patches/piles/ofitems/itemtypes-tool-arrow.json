@@ -1,0 +1,41 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [{
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/stickplace",
+        "stackingModel": "morepiles:shapes/arrowpile_32",
+        "tessQuantityElements": 7,
+        "stackingCapacity": 64,
+        "bulkTransferQuantity": 8,
+        "collisionBox": {
+          "x1": 0,
+          "y1": 0,
+          "z1": 0,
+          "x2": 1,
+          "y2": 1,
+          "z2": 1
+        }
+      }
+    }],
+    "file": "game:itemtypes/tool/arrow.json",
+    "condition": { "when": "PileArrowIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*"],
+    "file": "game:itemtypes/tool/arrow.json",
+    "condition": { "when": "PileArrowIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "game:itemtypes/tool/arrow.json",
+    "condition": { "when": "PileArrowStackingCapacity", "useValue": true }
+  }
+]

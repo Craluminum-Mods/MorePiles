@@ -1,0 +1,56 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors/0",
+    "value": {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/stickplace",
+        "stackingModel": "morepiles:shapes/paintingpile_16",
+        "tessQuantityElements": 5,
+        "stackingCapacity": 64,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0,
+          "y1": 0,
+          "z1": 0,
+          "x2": 1,
+          "y2": 1,
+          "z2": 1
+        }
+      }
+    },
+    "file": "game:blocktypes/wood/painting.json",
+    "condition": { "when": "PilePaintingIsEnabled", "isValue": "true" }
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*-north"],
+    "file": "game:blocktypes/wood/painting.json",
+    "condition": { "when": "PilePaintingIsEnabled", "isValue": "true" }
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "game:blocktypes/wood/painting.json",
+    "condition": { "when": "PilePaintingStackingCapacity", "useValue": true }
+  },
+
+  {
+    "op": "add",
+    "path": "/behaviors/0/properties/cbScaleYByLayer",
+    "value": 1,
+    "file": "game:blocktypes/wood/painting.json",
+    "condition": { "when": "PilePaintingStackingCapacity", "isValue": 16 }
+  },
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/collisionBox/y2",
+    "value": 0.0625,
+    "file": "game:blocktypes/wood/painting.json",
+    "condition": { "when": "PilePaintingStackingCapacity", "isValue": 16 }
+  }
+]

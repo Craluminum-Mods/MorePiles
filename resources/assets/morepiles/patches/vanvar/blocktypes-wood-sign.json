@@ -1,0 +1,44 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors",
+    "value": [{
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Stacking",
+        "placeRemoveSound": "sounds/block/stickplace",
+        "stackingModel": "morepiles:shapes/signpile_8",
+        "tessQuantityElements": 2,
+        "stackingCapacity": 64,
+        "bulkTransferQuantity": 4,
+        "collisionBox": {
+          "x1": 0.125,
+          "y1": 0,
+          "z1": 0.125,
+          "x2": 0.875,
+          "y2": 1,
+          "z2": 0.875
+        }
+      }
+    }],
+    "file": "vanvar:blocktypes/wood/sign.json",
+    "condition": { "when": "PileSignIsEnabled", "isValue": "true" },
+    "dependsOn": [{"modid": "vanvar"}]
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory/groundstorable",
+    "value": ["*-ground-north"],
+    "file": "vanvar:blocktypes/wood/sign.json",
+    "condition": { "when": "PileSignIsEnabled", "isValue": "true" },
+    "dependsOn": [{"modid": "vanvar"}]
+  },
+
+  {
+    "op": "replace",
+    "path": "/behaviors/0/properties/stackingCapacity",
+    "file": "vanvar:blocktypes/wood/sign.json",
+    "condition": { "when": "PileSignStackingCapacity", "useValue": true },
+    "dependsOn": [{"modid": "vanvar"}]
+  }
+]
