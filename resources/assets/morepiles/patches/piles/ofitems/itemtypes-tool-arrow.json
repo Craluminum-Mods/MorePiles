@@ -22,14 +22,14 @@
       }
     }],
     "file": "game:itemtypes/tool/arrow.json",
-    "condition": { "when": "PileArrowIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileArrowEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/tool/arrow.json",
-    "condition": { "when": "PileArrowIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileArrowEnabled", "isValue": "true" }
   },
 
   {

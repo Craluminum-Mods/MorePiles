@@ -22,7 +22,7 @@
       }
     },
     "file": "vanvar:blocktypes/wood/henbox.json",
-    "condition": { "when": "PileHenboxIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileHenboxEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
   {
@@ -30,7 +30,7 @@
     "path": "/creativeinventory/groundstorable",
     "value": ["*-empty"],
     "file": "vanvar:blocktypes/wood/henbox.json",
-    "condition": { "when": "PileHenboxIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileHenboxEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
 

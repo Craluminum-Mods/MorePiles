@@ -22,14 +22,14 @@
       }
     },
     "file": "game:blocktypes/wood/toolrack.json",
-    "condition": { "when": "PileToolrackIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileToolrackEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-north"],
     "file": "game:blocktypes/wood/toolrack.json",
-    "condition": { "when": "PileToolrackIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileToolrackEnabled", "isValue": "true" }
   },
 
   {

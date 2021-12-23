@@ -22,7 +22,7 @@
       }
     },
     "file": "vanvar:blocktypes/wood/trapdoor.json",
-    "condition": { "when": "PileTrapdoorIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileTrapdoorEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
   {
@@ -30,7 +30,7 @@
     "path": "/creativeinventory/groundstorable",
     "value": ["*-closed-up-north"],
     "file": "vanvar:blocktypes/wood/trapdoor.json",
-    "condition": { "when": "PileTrapdoorIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileTrapdoorEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
 

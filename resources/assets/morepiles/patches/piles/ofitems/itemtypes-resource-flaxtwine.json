@@ -22,14 +22,14 @@
       }
     }],
     "file": "game:itemtypes/resource/flaxtwine.json",
-    "condition": { "when": "PileFlaxTwineIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileFlaxTwineEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/flaxtwine.json",
-    "condition": { "when": "PileFlaxTwineIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileFlaxTwineEnabled", "isValue": "true" }
   },
 
   {

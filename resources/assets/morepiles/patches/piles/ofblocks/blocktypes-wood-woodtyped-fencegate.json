@@ -22,14 +22,14 @@
       }
     },
     "file": "game:blocktypes/wood/woodtyped/fencegate.json",
-    "condition": { "when": "PileFenceGateWoodenIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileFenceGateWoodenEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-n-closed-left-free"],
     "file": "game:blocktypes/wood/woodtyped/fencegate.json",
-    "condition": { "when": "PileFenceGateWoodenIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileFenceGateWoodenEnabled", "isValue": "true" }
   },
 
   {

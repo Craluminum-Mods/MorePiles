@@ -22,7 +22,7 @@
       }
     }],
     "file": "vanvar:blocktypes/wood/trough-large.json",
-    "condition": { "when": "PileTroughLargeIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileTroughLargeEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
   {
@@ -30,7 +30,7 @@
     "path": "/creativeinventory/groundstorable",
     "value": ["*-head-north"],
     "file": "vanvar:blocktypes/wood/trough-large.json",
-    "condition": { "when": "PileTroughLargeIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileTroughLargeEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
 

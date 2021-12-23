@@ -35,7 +35,7 @@ namespace MorePiles
 
 			foreach (KeyValuePair<string, Part> p in settingsFromDisk)
 			{
-				api.World.Config.SetBool($"Pile{p.Key}IsEnabled", p.Value.Enabled);
+				api.World.Config.SetBool($"Pile{p.Key}Enabled", p.Value.Enabled);
 				api.World.Config.SetInt($"Pile{p.Key}StackingCapacity", p.Value.StackingCapacity);
 			}
 		}

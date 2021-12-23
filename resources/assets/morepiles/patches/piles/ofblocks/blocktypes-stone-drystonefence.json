@@ -22,14 +22,14 @@
       }
     },
     "file": "game:blocktypes/stone/drystonefence.json",
-    "condition": { "when": "PileFenceDryStoneIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileFenceDryStoneEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-ew-free"],
     "file": "game:blocktypes/stone/drystonefence.json",
-    "condition": { "when": "PileFenceDryStoneIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileFenceDryStoneEnabled", "isValue": "true" }
   },
 
   {

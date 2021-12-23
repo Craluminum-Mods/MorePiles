@@ -22,14 +22,14 @@
       }
     }],
     "file": "game:itemtypes/resource/honeycomb.json",
-    "condition": { "when": "PileHoneycombIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileHoneycombEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/honeycomb.json",
-    "condition": { "when": "PileHoneycombIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileHoneycombEnabled", "isValue": "true" }
   },
 
   {

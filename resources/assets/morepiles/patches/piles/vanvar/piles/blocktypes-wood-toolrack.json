@@ -22,7 +22,7 @@
       }
     },
     "file": "vanvar:blocktypes/wood/toolrack.json",
-    "condition": { "when": "PileToolrackIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileToolrackEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
   {
@@ -30,7 +30,7 @@
     "path": "/creativeinventory/groundstorable",
     "value": ["*-north"],
     "file": "vanvar:blocktypes/wood/toolrack.json",
-    "condition": { "when": "PileToolrackIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileToolrackEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
 

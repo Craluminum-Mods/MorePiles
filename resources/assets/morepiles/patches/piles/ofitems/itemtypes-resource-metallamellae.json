@@ -22,14 +22,14 @@
       }
     }],
     "file": "game:itemtypes/resource/metallamellae.json",
-    "condition": { "when": "PileMetalLamellaeIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileMetalLamellaeEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/metallamellae.json",
-    "condition": { "when": "PileMetalLamellaeIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileMetalLamellaeEnabled", "isValue": "true" }
   },
 
   {

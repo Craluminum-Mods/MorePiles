@@ -22,7 +22,7 @@
       }
     },
     "file": "vanvar:blocktypes/wood/ladder.json",
-    "condition": { "when": "PileLadderIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileLadderEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
   {
@@ -30,7 +30,7 @@
     "path": "/creativeinventory/groundstorable",
     "value": ["*-north"],
     "file": "vanvar:blocktypes/wood/ladder.json",
-    "condition": { "when": "PileLadderIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileLadderEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
 

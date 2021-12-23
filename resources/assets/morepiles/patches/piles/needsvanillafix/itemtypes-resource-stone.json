@@ -22,7 +22,7 @@
       }
     }],
     "file": "game:itemtypes/resource/stone.json",
-    "condition": { "when": "PileStoneIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileStoneEnabled", "isValue": "true" }
   },
   {
     "op": "add",
@@ -47,14 +47,14 @@
       }
     }],
     "file": "game:itemtypes/resource/stone.json",
-    "condition": { "when": "PileStoneIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileStoneEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/stone.json",
-    "condition": { "when": "PileStoneIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileStoneEnabled", "isValue": "true" }
   },
 
   {

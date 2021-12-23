@@ -22,14 +22,14 @@
       }
     }],
     "file": "game:blocktypes/wood/sign.json",
-    "condition": { "when": "PileSignIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileSignEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-ground-north"],
     "file": "game:blocktypes/wood/sign.json",
-    "condition": { "when": "PileSignIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileSignEnabled", "isValue": "true" }
   },
 
   {

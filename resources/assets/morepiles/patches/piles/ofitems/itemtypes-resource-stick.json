@@ -22,14 +22,14 @@
       }
     }],
     "file": "game:itemtypes/resource/stick.json",
-    "condition": { "when": "PileStickIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileStickEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/stick.json",
-    "condition": { "when": "PileStickIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileStickEnabled", "isValue": "true" }
   },
 
   {

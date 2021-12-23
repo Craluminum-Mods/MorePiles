@@ -24,13 +24,13 @@
       }
     },
     "file": "game:blocktypes/clay/pot.json",
-    "condition": { "when": "PileCookingPotBurntIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileCookingPotBurntEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-burned"],
     "file": "game:blocktypes/clay/pot.json",
-    "condition": { "when": "PileCookingPotBurntIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileCookingPotBurntEnabled", "isValue": "true" }
   }
 ]

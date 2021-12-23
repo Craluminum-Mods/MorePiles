@@ -22,14 +22,14 @@
       }
     },
     "file": "game:blocktypes/wood/trough-small.json",
-    "condition": { "when": "PileTroughSmallIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileTroughSmallEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-ns"],
     "file": "game:blocktypes/wood/trough-small.json",
-    "condition": { "when": "PileTroughSmallIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileTroughSmallEnabled", "isValue": "true" }
   },
 
   {

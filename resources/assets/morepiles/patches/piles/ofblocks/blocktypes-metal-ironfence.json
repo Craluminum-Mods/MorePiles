@@ -28,14 +28,14 @@
       }
     }],
     "file": "game:blocktypes/metal/ironfence.json",
-    "condition": { "when": "PileIronFenceIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileIronFenceEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["@*-(base|top)-ew"],
     "file": "game:blocktypes/metal/ironfence.json",
-    "condition": { "when": "PileIronFenceIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileIronFenceEnabled", "isValue": "true" }
   },
 
   {

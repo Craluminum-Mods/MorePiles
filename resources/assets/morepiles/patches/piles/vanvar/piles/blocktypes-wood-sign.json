@@ -22,7 +22,7 @@
       }
     }],
     "file": "vanvar:blocktypes/wood/sign.json",
-    "condition": { "when": "PileSignIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileSignEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
   {
@@ -30,7 +30,7 @@
     "path": "/creativeinventory/groundstorable",
     "value": ["*-ground-north"],
     "file": "vanvar:blocktypes/wood/sign.json",
-    "condition": { "when": "PileSignIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileSignEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
 

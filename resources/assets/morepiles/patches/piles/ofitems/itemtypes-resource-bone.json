@@ -22,14 +22,14 @@
       }
     }],
     "file": "game:itemtypes/resource/bone.json",
-    "condition": { "when": "PileBoneIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileBoneEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/bone.json",
-    "condition": { "when": "PileBoneIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileBoneEnabled", "isValue": "true" }
   },
 
   {

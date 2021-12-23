@@ -22,14 +22,14 @@
       }
     },
     "file": "game:blocktypes/wood/painting.json",
-    "condition": { "when": "PilePaintingIsEnabled", "isValue": "true" }
+    "condition": { "when": "PilePaintingEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-north"],
     "file": "game:blocktypes/wood/painting.json",
-    "condition": { "when": "PilePaintingIsEnabled", "isValue": "true" }
+    "condition": { "when": "PilePaintingEnabled", "isValue": "true" }
   },
 
   {

@@ -22,14 +22,14 @@
       }
     },
     "file": "game:blocktypes/wood/trapdoor.json",
-    "condition": { "when": "PileTrapdoorIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileTrapdoorEnabled", "isValue": "true" }
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-closed-up-north"],
     "file": "game:blocktypes/wood/trapdoor.json",
-    "condition": { "when": "PileTrapdoorIsEnabled", "isValue": "true" }
+    "condition": { "when": "PileTrapdoorEnabled", "isValue": "true" }
   },
 
   {

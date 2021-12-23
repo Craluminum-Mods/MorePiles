@@ -22,7 +22,7 @@
       }
     },
     "file": "vanvar:blocktypes/wood/trough-small.json",
-    "condition": { "when": "PileTroughSmallIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileTroughSmallEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
   {
@@ -30,7 +30,7 @@
     "path": "/creativeinventory/groundstorable",
     "value": ["*-ns"],
     "file": "vanvar:blocktypes/wood/trough-small.json",
-    "condition": { "when": "PileTroughSmallIsEnabled", "isValue": "true" },
+    "condition": { "when": "PileTroughSmallEnabled", "isValue": "true" },
     "dependsOn": [{"modid": "vanvar"}]
   },
 
