@@ -9,11 +9,13 @@
         "placeRemoveSound": "sounds/block/stickplace",
         "stackingModelByType": {
           "*-wood-*": "morepiles:shapes/ladderpile-wood_8",
-          "*-rope-*": "morepiles:shapes/ladderpile-rope_8"
+          "*-rope-*": "morepiles:shapes/ladderpile-rope_8",
+          "*": "morepiles:shapes/ladderpile-wood_8"
         },
         "tessQuantityElementsByType": {
           "*-wood-*": 5,
-          "*-rope-*": 11
+          "*-rope-*": 11,
+          "*": 5
         },
         "stackingCapacity": 64,
         "bulkTransferQuantity": 4,
@@ -33,7 +35,7 @@
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
-    "value": ["@*-(wood|rope)-north"],
+    "value": ["@.*-north"],
     "file": "game:blocktypes/wood/ladder.json",
     "condition": { "when": "PileLadderEnabled", "isValue": "true" }
   },
