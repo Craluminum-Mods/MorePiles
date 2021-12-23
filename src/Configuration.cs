@@ -10,7 +10,7 @@ using MorePiles.List;
 
 namespace MorePiles
 {
-  public class Configuration : ModSystem
+  public class Core : ModSystem
 	{
     public override void StartPre(ICoreAPI api)
 		{
@@ -33,7 +33,7 @@ namespace MorePiles
 				api.StoreModConfig<MorePilesConfig>(MorePilesConfig.Loaded, "MorePilesConfig.json");
 			}
 
-			foreach (KeyValuePair<string, Pile> p in settingsFromDisk)
+			foreach (KeyValuePair<string, Part> p in settingsFromDisk)
 			{
 				api.World.Config.SetBool($"Pile{p.Key}IsEnabled", p.Value.Enabled);
 				api.World.Config.SetInt($"Pile{p.Key}StackingCapacity", p.Value.StackingCapacity);
