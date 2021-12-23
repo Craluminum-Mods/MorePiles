@@ -8,7 +8,7 @@
         "layout": "Stacking",
         "placeRemoveSound": "sounds/block/ingot",
         "stackingModel": "morepiles:shapes/torchholderpile_8",
-        "tessQuantityElements": 5,
+        "tessQuantityElements": 4,
         "stackingCapacity": 8,
         "bulkTransferQuantity": 2,
         "collisionBox": {
