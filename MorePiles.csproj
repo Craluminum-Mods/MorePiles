@@ -15,12 +15,6 @@
     </Reference>
   </ItemGroup>
 
-	<ItemGroup Condition="'$(Configuration)' == 'Release'">
-		<None Include="resources/**">
-			<Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-	</ItemGroup>
   <ItemGroup Condition="'$(Configuration)' == 'ReleaseToMods'">
 		<None Include="resources/**">
 			<Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
@@ -28,9 +22,6 @@
 		</None>
 	</ItemGroup>
 	
-	<Target Name="Package" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Release'">
-		<ZipDirectory DestinationFile="bin/$(TargetName).zip" SourceDirectory="$(TargetDir)" Overwrite="true" />
-	</Target>
   <Target Name="Package" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'ReleaseToMods'">
 		<ZipDirectory DestinationFile="$(VINTAGE_STORY_DATA)/Mods/$(TargetName)-v1.2.1.zip" SourceDirectory="$(TargetDir)" Overwrite="true" />
 	</Target>
