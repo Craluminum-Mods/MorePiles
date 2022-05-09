@@ -2,14 +2,12 @@
   "type": "code",
   "name": "More Piles",
   "modid": "morepiles",
-  "version": "1.2.0",
-
-  "description": "Adds piles for some items and blocks",
-  "website": "https://github.com/Craluminum2413/MorePiles",
+  "version": "1.2.1",
   "authors": [ "Craluminum2413" ],
   "contributors": [ "Apache", "rar61" ],
-
   "dependencies": {
-  "game": "1.15.0"
+  "game": "1.15.0",
+  "aaamakeitcompatible": "0.0.0"
+
   }
 }
