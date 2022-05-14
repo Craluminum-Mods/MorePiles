@@ -22,20 +22,23 @@
       }
     },
     "file": "game:blocktypes/wood/trapdoor.json",
-    "condition": { "when": "PileTrapdoorEnabled", "isValue": "true" }
+    "condition": { "when": "PileTrapdoorEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-closed-up-north"],
     "file": "game:blocktypes/wood/trapdoor.json",
-    "condition": { "when": "PileTrapdoorEnabled", "isValue": "true" }
+    "condition": { "when": "PileTrapdoorEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/wood/trapdoor.json",
-    "condition": { "when": "PileTrapdoorStackingCapacity", "useValue": true }
+    "condition": { "when": "PileTrapdoorStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

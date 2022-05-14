@@ -22,20 +22,23 @@
       }
     }],
     "file": "game:blocktypes/mechanics/angledgears.json",
-    "condition": { "when": "PileAngledGearEnabled", "isValue": "true" }
+    "condition": { "when": "PileAngledGearEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-s"],
     "file": "game:blocktypes/mechanics/angledgears.json",
-    "condition": { "when": "PileAngledGearEnabled", "isValue": "true" }
+    "condition": { "when": "PileAngledGearEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/mechanics/angledgears.json",
-    "condition": { "when": "PileAngledGearStackingCapacity", "useValue": true }
+    "condition": { "when": "PileAngledGearStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

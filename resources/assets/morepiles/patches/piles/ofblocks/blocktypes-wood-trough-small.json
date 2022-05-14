@@ -22,20 +22,23 @@
       }
     },
     "file": "game:blocktypes/wood/trough-small.json",
-    "condition": { "when": "PileTroughSmallEnabled", "isValue": "true" }
+    "condition": { "when": "PileTroughSmallEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-ns"],
     "file": "game:blocktypes/wood/trough-small.json",
-    "condition": { "when": "PileTroughSmallEnabled", "isValue": "true" }
+    "condition": { "when": "PileTroughSmallEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/wood/trough-small.json",
-    "condition": { "when": "PileTroughSmallStackingCapacity", "useValue": true }
+    "condition": { "when": "PileTroughSmallStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

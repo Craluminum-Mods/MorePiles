@@ -2,40 +2,45 @@
   {
     "op": "add",
     "path": "/behaviors",
-    "value": [{
-      "name": "GroundStorable",
-      "properties": {
-        "layout": "Stacking",
-        "placeRemoveSound": "sounds/wearable/chain1",
-        "stackingModel": "morepiles:shapes/metallamellaepile_32",
-        "tessQuantityElements": 4,
-        "stackingCapacity": 8,
-        "bulkTransferQuantity": 4,
-        "collisionBox": {
-          "x1": 0.094,
-          "y1": 0,
-          "z1": 0,
-          "x2": 0.906,
-          "y2": 1,
-          "z2": 1
+    "value": [
+      {
+        "name": "GroundStorable",
+        "properties": {
+          "layout": "Stacking",
+          "placeRemoveSound": "sounds/wearable/chain1",
+          "stackingModel": "morepiles:shapes/metallamellaepile_32",
+          "tessQuantityElements": 4,
+          "stackingCapacity": 8,
+          "bulkTransferQuantity": 4,
+          "collisionBox": {
+            "x1": 0.094,
+            "y1": 0,
+            "z1": 0,
+            "x2": 0.906,
+            "y2": 1,
+            "z2": 1
+          }
         }
       }
-    }],
+    ],
     "file": "game:itemtypes/resource/metallamellae.json",
-    "condition": { "when": "PileMetalLamellaeEnabled", "isValue": "true" }
+    "condition": { "when": "PileMetalLamellaeEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/metallamellae.json",
-    "condition": { "when": "PileMetalLamellaeEnabled", "isValue": "true" }
+    "condition": { "when": "PileMetalLamellaeEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:itemtypes/resource/metallamellae.json",
-    "condition": { "when": "PileMetalLamellaeStackingCapacity", "useValue": true }
+    "condition": { "when": "PileMetalLamellaeStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

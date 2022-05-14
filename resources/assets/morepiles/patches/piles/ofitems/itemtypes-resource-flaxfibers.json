@@ -2,40 +2,45 @@
   {
     "op": "add",
     "path": "/behaviors",
-    "value": [{
-      "name": "GroundStorable",
-      "properties": {
-        "layout": "Stacking",
-        "placeRemoveSound": "sounds/block/stickplace",
-        "stackingModel": "morepiles:shapes/flaxfiberspile_16",
-        "tessQuantityElements": 9,
-        "stackingCapacity": 64,
-        "bulkTransferQuantity": 8,
-        "collisionBox": {
-          "x1": 0,
-          "y1": 0,
-          "z1": 0,
-          "x2": 1,
-          "y2": 1,
-          "z2": 1
+    "value": [
+      {
+        "name": "GroundStorable",
+        "properties": {
+          "layout": "Stacking",
+          "placeRemoveSound": "sounds/block/stickplace",
+          "stackingModel": "morepiles:shapes/flaxfiberspile_16",
+          "tessQuantityElements": 9,
+          "stackingCapacity": 64,
+          "bulkTransferQuantity": 8,
+          "collisionBox": {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0,
+            "x2": 1,
+            "y2": 1,
+            "z2": 1
+          }
         }
       }
-    }],
+    ],
     "file": "game:itemtypes/resource/flaxfibers.json",
-    "condition": { "when": "PileFlaxFibersEnabled", "isValue": "true" }
+    "condition": { "when": "PileFlaxFibersEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/flaxfibers.json",
-    "condition": { "when": "PileFlaxFibersEnabled", "isValue": "true" }
+    "condition": { "when": "PileFlaxFibersEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:itemtypes/resource/flaxfibers.json",
-    "condition": { "when": "PileFlaxFibersStackingCapacity", "useValue": true }
+    "condition": { "when": "PileFlaxFibersStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

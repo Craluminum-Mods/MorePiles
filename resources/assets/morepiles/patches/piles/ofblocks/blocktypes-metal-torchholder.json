@@ -22,20 +22,23 @@
       }
     },
     "file": "game:blocktypes/metal/torchholder.json",
-    "condition": { "when": "PileTorchholderEnabled", "isValue": "true" }
+    "condition": { "when": "PileTorchholderEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-empty-north"],
     "file": "game:blocktypes/metal/torchholder.json",
-    "condition": { "when": "PileTorchholderEnabled", "isValue": "true" }
+    "condition": { "when": "PileTorchholderEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/metal/torchholder.json",
-    "condition": { "when": "PileTorchholderStackingCapacity", "useValue": true }
+    "condition": { "when": "PileTorchholderStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

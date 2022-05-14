@@ -2,40 +2,45 @@
   {
     "op": "add",
     "path": "/behaviors",
-    "value": [{
-      "name": "GroundStorable",
-      "properties": {
-        "layout": "Stacking",
-        "placeRemoveSound": "sounds/wearable/chain1",
-        "stackingModel": "morepiles:shapes/metalscalespile_32",
-        "tessQuantityElements": 12,
-        "stackingCapacity": 8,
-        "bulkTransferQuantity": 4,
-        "collisionBox": {
-          "x1": 0,
-          "y1": 0,
-          "z1": 0.125,
-          "x2": 1,
-          "y2": 1,
-          "z2": 0.875
+    "value": [
+      {
+        "name": "GroundStorable",
+        "properties": {
+          "layout": "Stacking",
+          "placeRemoveSound": "sounds/wearable/chain1",
+          "stackingModel": "morepiles:shapes/metalscalespile_32",
+          "tessQuantityElements": 12,
+          "stackingCapacity": 8,
+          "bulkTransferQuantity": 4,
+          "collisionBox": {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0.125,
+            "x2": 1,
+            "y2": 1,
+            "z2": 0.875
+          }
         }
       }
-    }],
+    ],
     "file": "game:itemtypes/resource/metalscale.json",
-    "condition": { "when": "PileMetalScalesEnabled", "isValue": "true" }
+    "condition": { "when": "PileMetalScalesEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/metalscale.json",
-    "condition": { "when": "PileMetalScalesEnabled", "isValue": "true" }
+    "condition": { "when": "PileMetalScalesEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:itemtypes/resource/metalscale.json",
-    "condition": { "when": "PileMetalScalesStackingCapacity", "useValue": true }
+    "condition": { "when": "PileMetalScalesStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

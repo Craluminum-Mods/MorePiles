@@ -22,21 +22,24 @@
       }
     },
     "file": "game:blocktypes/wood/painting.json",
-    "condition": { "when": "PilePaintingEnabled", "isValue": "true" }
+    "condition": { "when": "PilePaintingEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-north"],
     "file": "game:blocktypes/wood/painting.json",
-    "condition": { "when": "PilePaintingEnabled", "isValue": "true" }
+    "condition": { "when": "PilePaintingEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/wood/painting.json",
-    "condition": { "when": "PilePaintingStackingCapacity", "useValue": true }
+    "condition": { "when": "PilePaintingStackingCapacity", "useValue": true },
+    "side": "server"
   },
 
   {
@@ -44,13 +47,15 @@
     "path": "/behaviors/0/properties/cbScaleYByLayer",
     "value": 1,
     "file": "game:blocktypes/wood/painting.json",
-    "condition": { "when": "PilePaintingStackingCapacity", "isValue": 16 }
+    "condition": { "when": "PilePaintingStackingCapacity", "isValue": 16 },
+    "side": "server"
   },
   {
     "op": "replace",
     "path": "/behaviors/0/properties/collisionBox/y2",
     "value": 0.0625,
     "file": "game:blocktypes/wood/painting.json",
-    "condition": { "when": "PilePaintingStackingCapacity", "isValue": 16 }
+    "condition": { "when": "PilePaintingStackingCapacity", "isValue": 16 },
+    "side": "server"
   }
 ]

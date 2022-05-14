@@ -23,7 +23,8 @@
     },
     "file": "vanvar:blocktypes/wood/toolrack.json",
     "condition": { "when": "PileToolrackEnabled", "isValue": "true" },
-    "dependsOn": [{"modid": "vanvar"}]
+    "dependsOn": [{ "modid": "vanvar" }],
+    "side": "server"
   },
   {
     "op": "add",
@@ -31,7 +32,8 @@
     "value": ["*-north"],
     "file": "vanvar:blocktypes/wood/toolrack.json",
     "condition": { "when": "PileToolrackEnabled", "isValue": "true" },
-    "dependsOn": [{"modid": "vanvar"}]
+    "dependsOn": [{ "modid": "vanvar" }],
+    "side": "server"
   },
 
   {
@@ -39,6 +41,7 @@
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "vanvar:blocktypes/wood/toolrack.json",
     "condition": { "when": "PileToolrackStackingCapacity", "useValue": true },
-    "dependsOn": [{"modid": "vanvar"}]
+    "dependsOn": [{ "modid": "vanvar" }],
+    "side": "server"
   }
 ]

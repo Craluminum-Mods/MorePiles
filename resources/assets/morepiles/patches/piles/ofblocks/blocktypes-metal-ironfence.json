@@ -28,20 +28,23 @@
       }
     }],
     "file": "game:blocktypes/metal/ironfence.json",
-    "condition": { "when": "PileIronFenceEnabled", "isValue": "true" }
+    "condition": { "when": "PileIronFenceEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["@*-(base|top)-ew"],
     "file": "game:blocktypes/metal/ironfence.json",
-    "condition": { "when": "PileIronFenceEnabled", "isValue": "true" }
+    "condition": { "when": "PileIronFenceEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/metal/ironfence.json",
-    "condition": { "when": "PileIronFenceStackingCapacity", "useValue": true }
+    "condition": { "when": "PileIronFenceStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

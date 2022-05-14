@@ -2,40 +2,45 @@
   {
     "op": "add",
     "path": "/behaviors",
-    "value": [{
-      "name": "GroundStorable",
-      "properties": {
-        "layout": "Stacking",
-        "placeRemoveSound": "sounds/block/cloth",
-        "stackingModel": "morepiles:shapes/clothpile_12",
-        "tessQuantityElements": 4,
-        "stackingCapacity": 32,
-        "bulkTransferQuantity": 2,
-        "collisionBox": {
-          "x1": 0,
-          "y1": 0,
-          "z1": 0,
-          "x2": 1,
-          "y2": 1,
-          "z2": 1
+    "value": [
+      {
+        "name": "GroundStorable",
+        "properties": {
+          "layout": "Stacking",
+          "placeRemoveSound": "sounds/block/cloth",
+          "stackingModel": "morepiles:shapes/clothpile_12",
+          "tessQuantityElements": 4,
+          "stackingCapacity": 32,
+          "bulkTransferQuantity": 2,
+          "collisionBox": {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0,
+            "x2": 1,
+            "y2": 1,
+            "z2": 1
+          }
         }
       }
-    }],
+    ],
     "file": "game:itemtypes/resource/cloth.json",
-    "condition": { "when": "PileClothEnabled", "isValue": "true" }
+    "condition": { "when": "PileClothEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/cloth.json",
-    "condition": { "when": "PileClothEnabled", "isValue": "true" }
+    "condition": { "when": "PileClothEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:itemtypes/resource/cloth.json",
-    "condition": { "when": "PileClothStackingCapacity", "useValue": true }
+    "condition": { "when": "PileClothStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

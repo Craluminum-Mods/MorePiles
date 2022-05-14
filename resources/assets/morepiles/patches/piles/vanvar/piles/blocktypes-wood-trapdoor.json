@@ -23,7 +23,8 @@
     },
     "file": "vanvar:blocktypes/wood/trapdoor.json",
     "condition": { "when": "PileTrapdoorEnabled", "isValue": "true" },
-    "dependsOn": [{"modid": "vanvar"}]
+    "dependsOn": [{ "modid": "vanvar" }],
+    "side": "server"
   },
   {
     "op": "add",
@@ -31,7 +32,8 @@
     "value": ["*-closed-up-north"],
     "file": "vanvar:blocktypes/wood/trapdoor.json",
     "condition": { "when": "PileTrapdoorEnabled", "isValue": "true" },
-    "dependsOn": [{"modid": "vanvar"}]
+    "dependsOn": [{ "modid": "vanvar" }],
+    "side": "server"
   },
 
   {
@@ -39,6 +41,7 @@
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "vanvar:blocktypes/wood/trapdoor.json",
     "condition": { "when": "PileTrapdoorStackingCapacity", "useValue": true },
-    "dependsOn": [{"modid": "vanvar"}]
+    "dependsOn": [{ "modid": "vanvar" }],
+    "side": "server"
   }
 ]

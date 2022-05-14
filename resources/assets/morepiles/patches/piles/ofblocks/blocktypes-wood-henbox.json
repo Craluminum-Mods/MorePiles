@@ -22,20 +22,23 @@
       }
     },
     "file": "game:blocktypes/wood/henbox.json",
-    "condition": { "when": "PileHenboxEnabled", "isValue": "true" }
+    "condition": { "when": "PileHenboxEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-empty"],
     "file": "game:blocktypes/wood/henbox.json",
-    "condition": { "when": "PileHenboxEnabled", "isValue": "true" }
+    "condition": { "when": "PileHenboxEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/wood/henbox.json",
-    "condition": { "when": "PileHenboxStackingCapacity", "useValue": true }
+    "condition": { "when": "PileHenboxStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

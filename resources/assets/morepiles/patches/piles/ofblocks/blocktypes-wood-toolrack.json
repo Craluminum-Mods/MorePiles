@@ -22,20 +22,23 @@
       }
     },
     "file": "game:blocktypes/wood/toolrack.json",
-    "condition": { "when": "PileToolrackEnabled", "isValue": "true" }
+    "condition": { "when": "PileToolrackEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-north"],
     "file": "game:blocktypes/wood/toolrack.json",
-    "condition": { "when": "PileToolrackEnabled", "isValue": "true" }
+    "condition": { "when": "PileToolrackEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/wood/toolrack.json",
-    "condition": { "when": "PileToolrackStackingCapacity", "useValue": true }
+    "condition": { "when": "PileToolrackStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

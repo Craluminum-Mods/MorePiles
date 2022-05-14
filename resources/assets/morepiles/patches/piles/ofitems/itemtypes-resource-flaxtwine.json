@@ -2,40 +2,45 @@
   {
     "op": "add",
     "path": "/behaviors",
-    "value": [{
-      "name": "GroundStorable",
-      "properties": {
-        "layout": "Stacking",
-        "placeRemoveSound": "sounds/block/stickplace",
-        "stackingModel": "morepiles:shapes/flaxtwinepile_8",
-        "tessQuantityElements": 3,
-        "stackingCapacity": 32,
-        "bulkTransferQuantity": 8,
-        "collisionBox": {
-          "x1": 0.125,
-          "y1": 0,
-          "z1": 0.125,
-          "x2": 0.875,
-          "y2": 1,
-          "z2": 0.875
+    "value": [
+      {
+        "name": "GroundStorable",
+        "properties": {
+          "layout": "Stacking",
+          "placeRemoveSound": "sounds/block/stickplace",
+          "stackingModel": "morepiles:shapes/flaxtwinepile_8",
+          "tessQuantityElements": 3,
+          "stackingCapacity": 32,
+          "bulkTransferQuantity": 8,
+          "collisionBox": {
+            "x1": 0.125,
+            "y1": 0,
+            "z1": 0.125,
+            "x2": 0.875,
+            "y2": 1,
+            "z2": 0.875
+          }
         }
       }
-    }],
+    ],
     "file": "game:itemtypes/resource/flaxtwine.json",
-    "condition": { "when": "PileFlaxTwineEnabled", "isValue": "true" }
+    "condition": { "when": "PileFlaxTwineEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/flaxtwine.json",
-    "condition": { "when": "PileFlaxTwineEnabled", "isValue": "true" }
+    "condition": { "when": "PileFlaxTwineEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:itemtypes/resource/flaxtwine.json",
-    "condition": { "when": "PileFlaxTwineStackingCapacity", "useValue": true }
+    "condition": { "when": "PileFlaxTwineStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

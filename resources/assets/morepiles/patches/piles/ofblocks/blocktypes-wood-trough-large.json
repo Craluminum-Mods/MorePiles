@@ -22,20 +22,23 @@
       }
     }],
     "file": "game:blocktypes/wood/trough-large.json",
-    "condition": { "when": "PileTroughLargeEnabled", "isValue": "true" }
+    "condition": { "when": "PileTroughLargeEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-head-north"],
     "file": "game:blocktypes/wood/trough-large.json",
-    "condition": { "when": "PileTroughLargeEnabled", "isValue": "true" }
+    "condition": { "when": "PileTroughLargeEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/wood/trough-large.json",
-    "condition": { "when": "PileTroughLargeStackingCapacity", "useValue": true }
+    "condition": { "when": "PileTroughLargeStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

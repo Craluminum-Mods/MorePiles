@@ -22,20 +22,23 @@
       }
     }],
     "file": "game:blocktypes/wood/sign.json",
-    "condition": { "when": "PileSignEnabled", "isValue": "true" }
+    "condition": { "when": "PileSignEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-ground-north"],
     "file": "game:blocktypes/wood/sign.json",
-    "condition": { "when": "PileSignEnabled", "isValue": "true" }
+    "condition": { "when": "PileSignEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/wood/sign.json",
-    "condition": { "when": "PileSignStackingCapacity", "useValue": true }
+    "condition": { "when": "PileSignStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

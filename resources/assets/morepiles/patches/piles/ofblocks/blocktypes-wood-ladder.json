@@ -30,20 +30,23 @@
       }
     },
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "PileLadderEnabled", "isValue": "true" }
+    "condition": { "when": "PileLadderEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["@.*-north"],
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "PileLadderEnabled", "isValue": "true" }
+    "condition": { "when": "PileLadderEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/wood/ladder.json",
-    "condition": { "when": "PileLadderStackingCapacity", "useValue": true }
+    "condition": { "when": "PileLadderStackingCapacity", "useValue": true },
+    "side": "server"
   }
 ]

@@ -23,7 +23,8 @@
     },
     "file": "game:itemtypes/resource/beeswax.json",
     "condition": { "when": "PileBeeswaxEnabled", "isValue": "true" },
-    "dependsOn": [{ "modid": "aaamakeitcompatible" }]
+    "dependsOn": [{ "modid": "aaamakeitcompatible" }],
+    "side": "server"
   },
   {
     "op": "add",
@@ -31,7 +32,8 @@
     "value": ["*"],
     "file": "game:itemtypes/resource/beeswax.json",
     "condition": { "when": "PileBeeswaxEnabled", "isValue": "true" },
-    "dependsOn": [{ "modid": "aaamakeitcompatible" }]
+    "dependsOn": [{ "modid": "aaamakeitcompatible" }],
+    "side": "server"
   },
 
   {
@@ -39,6 +41,7 @@
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:itemtypes/resource/beeswax.json",
     "condition": { "when": "PileBeeswaxStackingCapacity", "useValue": true },
-    "dependsOn": [{ "modid": "aaamakeitcompatible" }]
+    "dependsOn": [{ "modid": "aaamakeitcompatible" }],
+    "side": "server"
   }
 ]

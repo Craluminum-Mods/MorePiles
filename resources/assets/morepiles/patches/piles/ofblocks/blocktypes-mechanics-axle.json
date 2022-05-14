@@ -22,21 +22,24 @@
       }
     },
     "file": "game:blocktypes/mechanics/axle.json",
-    "condition": { "when": "PileAxleEnabled", "isValue": "true" }
+    "condition": { "when": "PileAxleEnabled", "isValue": "true" },
+    "side": "server"
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*-ud"],
     "file": "game:blocktypes/mechanics/axle.json",
-    "condition": { "when": "PileAxleEnabled", "isValue": "true" }
+    "condition": { "when": "PileAxleEnabled", "isValue": "true" },
+    "side": "server"
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:blocktypes/mechanics/axle.json",
-    "condition": { "when": "PileAxleStackingCapacity", "useValue": true }
+    "condition": { "when": "PileAxleStackingCapacity", "useValue": true },
+    "side": "server"
   },
 
   {
@@ -44,7 +47,8 @@
     "path": "/behaviors/0/properties/tessQuantityElements",
     "file": "game:blocktypes/mechanics/axle.json",
     "value": 8,
-    "condition": { "when": "PileAxleStackingCapacity", "isValue": 4 }
+    "condition": { "when": "PileAxleStackingCapacity", "isValue": 4 },
+    "side": "server"
   },
 
   {
@@ -52,6 +56,7 @@
     "path": "/behaviors/0/properties/tessQuantityElements",
     "file": "game:blocktypes/mechanics/axle.json",
     "value": 4,
-    "condition": { "when": "PileAxleStackingCapacity", "isValue": 8 }
+    "condition": { "when": "PileAxleStackingCapacity", "isValue": 8 },
+    "side": "server"
   }
 ]
