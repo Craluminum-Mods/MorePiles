@@ -1,8 +1,8 @@
 [
   {
     "op": "add",
-    "path": "/behaviors",
-    "value": [{
+    "path": "/behaviors/0",
+    "value": {
       "name": "GroundStorable",
       "properties": {
         "layout": "Stacking",
@@ -20,22 +20,25 @@
           "z2": 0.75
         }
       }
-    }],
+    },
     "file": "game:itemtypes/resource/beeswax.json",
-    "condition": { "when": "PileBeeswaxEnabled", "isValue": "true" }
+    "condition": { "when": "PileBeeswaxEnabled", "isValue": "true" },
+    "dependsOn": [{ "modid": "aaamakeitcompatible" }]
   },
   {
     "op": "add",
     "path": "/creativeinventory/groundstorable",
     "value": ["*"],
     "file": "game:itemtypes/resource/beeswax.json",
-    "condition": { "when": "PileBeeswaxEnabled", "isValue": "true" }
+    "condition": { "when": "PileBeeswaxEnabled", "isValue": "true" },
+    "dependsOn": [{ "modid": "aaamakeitcompatible" }]
   },
 
   {
     "op": "replace",
     "path": "/behaviors/0/properties/stackingCapacity",
     "file": "game:itemtypes/resource/beeswax.json",
-    "condition": { "when": "PileBeeswaxStackingCapacity", "useValue": true }
+    "condition": { "when": "PileBeeswaxStackingCapacity", "useValue": true },
+    "dependsOn": [{ "modid": "aaamakeitcompatible" }]
   }
 ]
