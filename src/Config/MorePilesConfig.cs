@@ -31,6 +31,8 @@ namespace MorePiles.Configuration
             { "trapdoor", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 64 } },
             { "fence", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 64 } },
             { "fencegate", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 64 } },
+            { "stone", new() { Enabled = true, UpSolid = true, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 72 } },
+            { "rope", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 4, TransferQuantity = 1, StackingCapacity = 32 } },
         };
 
         public MorePilesConfig() { }

@@ -711,7 +711,52 @@ namespace MorePiles
                     obj.CreativeInventoryTabs = obj.CreativeInventoryTabs.Append("groundstorable");
                 }
                 #endregion fencegate
-            }
+                #region stone
+                if (obj.WildCardMatch("stone-*") && obj is ItemStone)
+                {
+                    const string key = "stone";
+                    if (!GetPile(api, key, out var pile).Enabled) continue;
+
+                    var gsprops = new GroundStorageProperties()
+                    {
+                        Layout = EnumGroundStorageLayout.Stacking,
+                        CbScaleYByLayer = (float)8 / pile.StackingCapacity,
+                        CollisionBox = new Cuboidf(0, 0, 0, 1, 0.125f, 1),
+                        ModelItemsToStackSizeRatio = 72 / pile.StackingCapacity,
+                        StackingModel = new AssetLocation("morepiles:shapes/stonepile_72"),
+                        PlaceRemoveSound = new AssetLocation("sounds/block/loosestone"),
+                        UpSolid = pile.UpSolid,
+                        BulkTransferQuantity = pile.BulkTransferQuantity,
+                        TransferQuantity = pile.TransferQuantity,
+                        StackingCapacity = pile.StackingCapacity,
+                    };
+                    AppendBehavior(obj, gsprops, new CollectibleBehaviorGroundStorable(obj));
+                    obj.CreativeInventoryTabs = obj.CreativeInventoryTabs.Append("groundstorable");
+                }
+                #endregion stone
+                #region rope
+                if (obj.Code.Equals(new AssetLocation("rope")))
+                {
+                    const string key = "rope";
+                    if (!GetPile(api, key, out var pile).Enabled) continue;
+
+                    var gsprops = new GroundStorageProperties()
+                    {
+                        Layout = EnumGroundStorageLayout.Stacking,
+                        CbScaleYByLayer = (float)8 / pile.StackingCapacity,
+                        CollisionBox = new Cuboidf(0, 0, 0, 1, 0.125f, 1),
+                        ModelItemsToStackSizeRatio = 512 / pile.StackingCapacity,
+                        StackingModel = new AssetLocation("morepiles:shapes/ropepile_32"),
+                        PlaceRemoveSound = new AssetLocation("sounds/block/cloth"),
+                        UpSolid = pile.UpSolid,
+                        BulkTransferQuantity = pile.BulkTransferQuantity,
+                        TransferQuantity = pile.TransferQuantity,
+                        StackingCapacity = pile.StackingCapacity,
+                    };
+                    AppendBehavior(obj, gsprops, new CollectibleBehaviorGroundStorable(obj));
+                    obj.CreativeInventoryTabs = obj.CreativeInventoryTabs.Append("groundstorable");
+                }
+                #endregion rope
         }
 
         private static float GetIronFenceRatio(CollectibleObject obj, int stackingCapacity) => obj.WildCardMatch("*-base-*")
