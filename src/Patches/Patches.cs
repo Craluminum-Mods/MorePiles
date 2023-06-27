@@ -655,7 +655,42 @@ namespace MorePiles
                     obj.CreativeInventoryTabs = obj.CreativeInventoryTabs.Append("groundstorable");
                 }
                 #endregion rope
+                #region mostCubicBlocks
+                if (obj is Block block && block.Shape.Base == new AssetLocation("block/basic/cube"))
+                {
+                    const string key = "mostCubicBlocks";
+                    if (!GetPile(api, key, out var pile).Enabled) continue;
+
+                    var gsprops = new GroundStorageProperties()
+                    {
+                        Layout = EnumGroundStorageLayout.Stacking,
+                        CbScaleYByLayer = (float)8 / pile.StackingCapacity,
+                        CollisionBox = new Cuboidf(0, 0, 0, 1, 0.125f, 1),
+                        ModelItemsToStackSizeRatio = 64 / pile.StackingCapacity,
+                        StackingModel = GetCubePileModelPath(obj),
+                        PlaceRemoveSound = block.Sounds.Place,
+                        UpSolid = pile.UpSolid,
+                        BulkTransferQuantity = pile.BulkTransferQuantity,
+                        TransferQuantity = pile.TransferQuantity,
+                        StackingCapacity = pile.StackingCapacity,
+                    };
+                    AppendBehavior(obj, gsprops, new CollectibleBehaviorGroundStorable(obj));
+
+                    if (obj.CreativeInventoryTabs != null && obj.CreativeInventoryTabs.Length != 0 && !string.IsNullOrEmpty(obj?.CreativeInventoryTabs?[0]))
+                    {
+                        obj.CreativeInventoryTabs = obj.CreativeInventoryTabs.Append("groundstorable");
+                    }
+                }
+                #endregion mostCubicBlocks
             }
+        }
+
+        private static AssetLocation GetCubePileModelPath(CollectibleObject obj)
+        {
+            return obj.MaxStackSize switch
+            {
+                _ => obj is BlockLog ? new AssetLocation("morepiles:shapes/cubelogpile_64") : new AssetLocation("morepiles:shapes/cubepile_64"),
+            };
         }
 
         private static Pile GetPile(ICoreAPI api, string key, out Pile pile)

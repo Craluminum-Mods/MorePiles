@@ -6,6 +6,7 @@ namespace MorePiles.Configuration
     {
         public Dictionary<string, Pile> Piles = new()
         {
+            { "mostCubicBlocks", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 4, TransferQuantity = 1, StackingCapacity = 64 } },
             { "arrow", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 64 } },
             { "bamboostakes", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 32 } },
             { "beeswax", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 32 } },
