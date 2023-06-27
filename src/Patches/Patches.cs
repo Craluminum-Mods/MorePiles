@@ -442,7 +442,7 @@ namespace MorePiles
                 #region ironfence
                 if (obj.WildCardMatch(new string[] { "ironfence-base-ew", "ironfence-top-ew" }))
                 {
-                    const string key = "axle";
+                    const string key = "ironfence";
                     if (!api.World.Config.GetBool($"morepiles-{key}-enabled")) continue;
                     var bulkTransferQuantity = api.World.Config.GetInt($"morepiles-{key}-bulktransferquantity");
                     var stackingCapacity = api.World.Config.GetInt($"morepiles-{key}-stackingcapacity");
