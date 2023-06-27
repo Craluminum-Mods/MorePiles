@@ -2,8 +2,7 @@
 using MorePiles.Configuration;
 using Vintagestory.API.Common;
 
-[assembly: ModInfo("More Piles",
-    Authors = new[] { "Craluminum2413" })]
+[assembly: ModInfo("More Piles")]
 
 namespace MorePiles
 {
