@@ -52,9 +52,10 @@ public class HarmonyPatches : ModSystem
         {
             if (blockSel == null || world == null || byPlayer?.Entity.Controls.ShiftKey != true) return true;
 
-            var activeSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
+            var activeSlot = byPlayer?.InventoryManager?.ActiveHotbarSlot;
+            if (activeSlot?.Empty != false) return true;
 
-            var bh = activeSlot?.Itemstack.Collectible.GetBehavior<CollectibleBehaviorGroundStorable>();
+            var bh = activeSlot?.Itemstack?.Collectible?.GetBehavior<CollectibleBehaviorGroundStorable>();
             if (bh is not null)
             {
                 var isGroundStorage = blockSel.Block is BlockGroundStorage;
