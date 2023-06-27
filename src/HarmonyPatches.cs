@@ -3,6 +3,7 @@ using HarmonyLib;
 using Vintagestory.API.Common;
 using Vintagestory.GameContent;
 using Vintagestory.API.MathTools;
+using System.Linq;
 
 namespace MorePiles;
 
@@ -40,6 +41,31 @@ public class HarmonyPatches : ModSystem
                 var handHandling = EnumHandling.PassThrough;
                 bh.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handling, ref handHandling);
                 return false;
+            }
+
+            return true;
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(Block), nameof(Block.CanPlaceBlock))]
+        public static bool Block_CanPlaceBlock_Patch(ref bool __result, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref string failureCode)
+        {
+            if (blockSel == null || world == null || byPlayer?.Entity.Controls.ShiftKey != true) return true;
+
+            var activeSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
+
+            var bh = activeSlot?.Itemstack.Collectible.GetBehavior<CollectibleBehaviorGroundStorable>();
+            if (bh is not null)
+            {
+                var isGroundStorage = blockSel.Block is BlockGroundStorage;
+
+                if ((isGroundStorage && blockSel.Face == BlockFacing.UP)
+                || (isGroundStorage && BlockFacing.HORIZONTALS.Contains(blockSel.Face))
+                || blockSel.Face == BlockFacing.UP)
+                {
+                    __result = false;
+                    return false;
+                }
             }
 
             return true;
