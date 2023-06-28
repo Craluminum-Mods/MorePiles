@@ -2,7 +2,7 @@
     "type": "code",
     "modid": "morepiles",
     "name": "More Piles",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "authors": ["Craluminum2413"],
     "contributors": ["Apache", "rar61"],
     "dependencies": {

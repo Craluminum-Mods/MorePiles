@@ -50,26 +50,59 @@ public class HarmonyPatches : ModSystem
         [HarmonyPatch(typeof(Block), nameof(Block.CanPlaceBlock))]
         public static bool Block_CanPlaceBlock_Patch(ref bool __result, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref string failureCode)
         {
-            if (blockSel == null || world == null || byPlayer?.Entity.Controls.ShiftKey != true) return true;
-
-            var activeSlot = byPlayer?.InventoryManager?.ActiveHotbarSlot;
+            if (blockSel == null || world == null || byPlayer == null) return true;
+            var activeSlot = byPlayer.InventoryManager?.ActiveHotbarSlot;
             if (activeSlot?.Empty != false) return true;
 
-            var bh = activeSlot?.Itemstack?.Collectible?.GetBehavior<CollectibleBehaviorGroundStorable>();
-            if (bh is not null)
-            {
-                var isGroundStorage = blockSel.Block is BlockGroundStorage;
+            var bh = activeSlot?.Itemstack.Collectible.GetBehavior<CollectibleBehaviorGroundStorable>();
+            if (bh == null) return true;
 
-                if ((isGroundStorage && blockSel.Face == BlockFacing.UP)
-                || (isGroundStorage && BlockFacing.HORIZONTALS.Contains(blockSel.Face))
-                || blockSel.Face == BlockFacing.UP)
-                {
-                    __result = false;
-                    return false;
-                }
+            var isGroundStorage = blockSel.Block is BlockGroundStorage;
+            if (isGroundStorage)
+            {
+                blockSel.Block.PriorityInteract = true;
+                __result = false;
+                return false;
             }
 
-            return true;
+            var needSprintKey = bh.StorageProps.SprintKey;
+            var shiftKey = byPlayer.Entity.Controls.ShiftKey;
+            var ctrlKey = byPlayer.Entity.Controls.CtrlKey;
+
+            if (blockSel.Face != BlockFacing.UP) return true;
+
+            var attributes = activeSlot.Itemstack.Collectible.Attributes;
+            if (attributes == null) return true;
+
+            var isKnappable = attributes["knappable"].AsBool();
+            var isItemStone = activeSlot.Itemstack.Collectible is ItemStone;
+
+            if (!shiftKey)
+            {
+                return true;
+            }
+            else if (needSprintKey && !ctrlKey)
+            {
+                return true;
+            }
+            else if (needSprintKey && shiftKey && ctrlKey && isKnappable)
+            {
+                __result = false;
+                return false;
+            }
+            else if (isKnappable || isItemStone)
+            {
+                return true;
+            }
+            else if (needSprintKey && shiftKey && !ctrlKey)
+            {
+                return true;
+            }
+            else
+            {
+                __result = false;
+                return false;
+            }
         }
     }
 }
