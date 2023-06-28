@@ -76,6 +76,7 @@ public class HarmonyPatches : ModSystem
 
             var isKnappable = attributes["knappable"].AsBool();
             var isItemStone = activeSlot.Itemstack.Collectible is ItemStone;
+            var isItemTreeSeed = activeSlot.Itemstack.Collectible is ItemTreeSeed;
 
             if (!shiftKey)
             {
@@ -90,7 +91,7 @@ public class HarmonyPatches : ModSystem
                 __result = false;
                 return false;
             }
-            else if (isKnappable || isItemStone)
+            else if (isKnappable || isItemStone || isItemTreeSeed)
             {
                 return true;
             }
