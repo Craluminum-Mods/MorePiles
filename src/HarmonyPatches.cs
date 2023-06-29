@@ -58,7 +58,9 @@ public class HarmonyPatches : ModSystem
             if (bh == null) return true;
 
             var isGroundStorage = blockSel.Block is BlockGroundStorage;
-            if (isGroundStorage)
+            var begs = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityGroundStorage;
+
+            if (isGroundStorage && begs?.OnTryCreateKiln() == false)
             {
                 blockSel.Block.PriorityInteract = true;
                 __result = false;
