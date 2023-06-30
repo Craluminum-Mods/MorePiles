@@ -60,7 +60,7 @@ public class HarmonyPatches : ModSystem
             var isGroundStorage = blockSel.Block is BlockGroundStorage;
             var begs = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityGroundStorage;
 
-            if (isGroundStorage && begs?.OnTryCreateKiln() == false)
+            if (isGroundStorage && !begs.CanCreatePitKiln())
             {
                 blockSel.Block.PriorityInteract = true;
                 __result = false;
@@ -80,31 +80,30 @@ public class HarmonyPatches : ModSystem
             var isItemStone = activeSlot.Itemstack.Collectible is ItemStone;
             var isItemTreeSeed = activeSlot.Itemstack.Collectible is ItemTreeSeed;
 
-            if (!shiftKey)
+            if (shiftKey)
             {
-                return true;
-            }
-            else if (needSprintKey && !ctrlKey)
-            {
-                return true;
-            }
-            else if (needSprintKey && shiftKey && ctrlKey && isKnappable)
-            {
-                __result = false;
-                return false;
-            }
-            else if (isKnappable || isItemStone || isItemTreeSeed)
-            {
-                return true;
-            }
-            else if (needSprintKey && shiftKey && !ctrlKey)
-            {
-                return true;
+                if (needSprintKey && !ctrlKey)
+                {
+                    return true;
+                }
+                else if (needSprintKey && ctrlKey && isKnappable)
+                {
+                    __result = false;
+                    return false;
+                }
+                else if (isKnappable || isItemStone || isItemTreeSeed)
+                {
+                    return true;
+                }
+                else
+                {
+                    __result = false;
+                    return false;
+                }
             }
             else
             {
-                __result = false;
-                return false;
+                return true;
             }
         }
     }
