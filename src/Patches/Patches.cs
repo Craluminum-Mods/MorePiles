@@ -9,20 +9,14 @@ namespace MorePiles
 {
     public static class Patches
     {
-        private static void AppendBehavior(CollectibleObject collobj, object props, CollectibleBehavior instance)
-        {
-            var properties = new JsonObject(JToken.FromObject(props));
-            instance.Initialize(properties);
-            collobj.CollectibleBehaviors = collobj.CollectibleBehaviors.Append(instance);
-        }
-
         public static void AppendBehaviors(this ICoreAPI api)
         {
-            foreach (var obj in api.World.Collectibles)
+            foreach (CollectibleObject obj in api.World.Collectibles)
             {
-                if (obj.Code == null) continue;
-                if (obj.Id == 0) continue;
-                if (obj.HasBehavior<CollectibleBehaviorGroundStorable>()) continue;
+                if (obj.Code == null || obj.Id == 0 || obj.HasBehavior<CollectibleBehaviorGroundStorable>())
+                {
+                    continue;
+                }
 
                 #region arrow
                 if (obj.WildCardMatch("arrow-*"))
@@ -428,6 +422,13 @@ namespace MorePiles
                 }
                 #endregion mostCubicBlocks
             }
+        }
+
+        private static void AppendBehavior(CollectibleObject collobj, object props, CollectibleBehavior instance)
+        {
+            JsonObject properties = new JsonObject(JToken.FromObject(props));
+            instance.Initialize(properties);
+            collobj.CollectibleBehaviors = collobj.CollectibleBehaviors.Append(instance);
         }
 
         private static void AppendCreativeInventoryTabs(CollectibleObject obj)

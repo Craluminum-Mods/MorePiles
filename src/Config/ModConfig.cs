@@ -1,46 +1,47 @@
 using Vintagestory.API.Common;
 
-namespace MorePiles.Configuration
+namespace MorePiles;
+
+public static class ModConfig
 {
-    static class ModConfig
+    private const string jsonConfig = "MorePilesConfig.json";
+    private static Config config;
+
+    public static Config ReadConfig(ICoreAPI api)
     {
-        private const string jsonConfig = "MorePilesConfig.json";
-        private static MorePilesConfig config;
-
-        public static void ReadConfig(ICoreAPI api)
+        try
         {
-            try
-            {
-                config = LoadConfig(api);
+            config = LoadConfig(api);
 
-                if (config == null)
-                {
-                    GenerateConfig(api);
-                    config = LoadConfig(api);
-                }
-                else
-                {
-                    GenerateConfig(api, config);
-                }
-            }
-            catch
+            if (config == null)
             {
                 GenerateConfig(api);
                 config = LoadConfig(api);
             }
-
-            foreach (var key in config.Piles.Keys)
+            else
             {
-                api.World.Config.SetBool($"morepiles-{key}-enabled", config.Piles[key].Enabled);
-                api.World.Config.SetBool($"morepiles-{key}-upsolid", config.Piles[key].UpSolid);
-                api.World.Config.SetInt($"morepiles-{key}-bulktransferquantity", config.Piles[key].BulkTransferQuantity);
-                api.World.Config.SetInt($"morepiles-{key}-stackingcapacity", config.Piles[key].StackingCapacity);
-                api.World.Config.SetInt($"morepiles-{key}-transferquantity", config.Piles[key].TransferQuantity);
+                GenerateConfig(api, config);
             }
         }
+        catch
+        {
+            GenerateConfig(api);
+            config = LoadConfig(api);
+        }
 
-        private static MorePilesConfig LoadConfig(ICoreAPI api) => api.LoadModConfig<MorePilesConfig>(jsonConfig);
-        private static void GenerateConfig(ICoreAPI api) => api.StoreModConfig(new MorePilesConfig(), jsonConfig);
-        private static void GenerateConfig(ICoreAPI api, MorePilesConfig previousConfig) => api.StoreModConfig(new MorePilesConfig(previousConfig), jsonConfig);
+        foreach (var key in config.Piles.Keys)
+        {
+            api.World.Config.SetBool($"morepiles-{key}-enabled", config.Piles[key].Enabled);
+            api.World.Config.SetBool($"morepiles-{key}-upsolid", config.Piles[key].UpSolid);
+            api.World.Config.SetInt($"morepiles-{key}-bulktransferquantity", config.Piles[key].BulkTransferQuantity);
+            api.World.Config.SetInt($"morepiles-{key}-stackingcapacity", config.Piles[key].StackingCapacity);
+            api.World.Config.SetInt($"morepiles-{key}-transferquantity", config.Piles[key].TransferQuantity);
+        }
+
+        return config;
     }
+
+    private static Config LoadConfig(ICoreAPI api) => api.LoadModConfig<Config>(jsonConfig);
+    private static void GenerateConfig(ICoreAPI api) => api.StoreModConfig(new Config(), jsonConfig);
+    private static void GenerateConfig(ICoreAPI api, Config previousConfig) => api.StoreModConfig(new Config(previousConfig), jsonConfig);
 }

@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net461</TargetFramework>
+		<TargetFramework>net7</TargetFramework>
         <LangVersion>11</LangVersion>
 	</PropertyGroup>
 	
@@ -48,7 +48,8 @@
         </Reference>
   </ItemGroup>
 
-  <ItemGroup Condition="'$(Configuration)' == 'ReleaseToMods'">
+	<ItemGroup Condition="'$(Configuration)' == 'ReleaseToMods'">
+		<None Include="*ICENSE" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="resources/**">
 			<Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -56,6 +57,6 @@
 	</ItemGroup>
 	
   <Target Name="Package" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'ReleaseToMods'">
-		<ZipDirectory DestinationFile="$(VINTAGE_STORY_DATA)/Mods/$(TargetName)-v1.4.3.zip" SourceDirectory="$(TargetDir)" Overwrite="true" />
+		<ZipDirectory DestinationFile="$(VINTAGE_STORY_DATA)/Mods/$(TargetName)-v1.5.0.zip" SourceDirectory="$(TargetDir)" Overwrite="true" />
 	</Target>
 </Project>
