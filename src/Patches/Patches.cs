@@ -40,7 +40,7 @@ public static class Patches
                 if (!pileEx.Enabled) continue;
                 var gsprops = pileEx.GroundStorageProps;
                 gsprops.CbScaleYByLayer = (float)8 / gsprops.StackingCapacity;
-                gsprops.CollisionBox = new Cuboidf(0.344f, 0, 0.344f, 0.656f, 0.125f, 0.656f);
+                gsprops.CollisionBox = new Cuboidf(0, 0, 0, 1, 0.125f, 1);
                 gsprops.PlaceRemoveSound = new AssetLocation("sounds/block/stickplace");
                 AppendBehavior(obj, gsprops, new CollectibleBehaviorGroundStorable(obj));
                 AppendCreativeInventoryTabs(obj);

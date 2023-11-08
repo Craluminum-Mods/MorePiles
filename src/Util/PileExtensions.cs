@@ -12,7 +12,7 @@ public static class PileExtensions
             "angledgears" => new AssetLocation("morepiles:shapes/angledgearpile_4"),
             "arrow" => new AssetLocation("morepiles:shapes/arrowpile_32"),
             "axle" => new AssetLocation("morepiles:shapes/axlepile_16"),
-            "bamboostakes" => new AssetLocation("morepiles:shapes/bamboostakespile_32"),
+            "bamboostakes" => new AssetLocation("morepiles:shapes/bamboostakespile_64"),
             "beeswax" => new AssetLocation("morepiles:shapes/beeswaxpile_8"),
             "bone" => new AssetLocation("morepiles:shapes/bonepile_64"),
             "chutesection" => new AssetLocation("morepiles:shapes/chutesectionpile_8"),
