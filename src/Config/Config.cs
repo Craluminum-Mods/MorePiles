@@ -12,7 +12,7 @@ public class Config
         { "beeswax", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 32 } },
         { "bone", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 64 } },
         { "chutesection", new() { Enabled = true, UpSolid = true, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 64 } },
-        { "cloth", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 32 } },
+        { "cloth", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 48 } },
         { "flaxfibers", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 128 } },
         { "flaxtwine", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 8, TransferQuantity = 1, StackingCapacity = 32 } },
         { "metalchain", new() { Enabled = true, UpSolid = false, BulkTransferQuantity = 4, TransferQuantity = 1, StackingCapacity = 8 } },
