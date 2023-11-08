@@ -95,8 +95,8 @@ public static class Patches
                 var pileEx = new PileExtended(key, obj, api);
                 if (!pileEx.Enabled) continue;
                 var gsprops = pileEx.GroundStorageProps;
-                gsprops.CbScaleYByLayer = (float)49.4062 / gsprops.StackingCapacity;
-                gsprops.CollisionBox = new Cuboidf(0, 0, 0, 1, 0.02f, 1);
+                gsprops.CbScaleYByLayer = (float)8 / gsprops.StackingCapacity;
+                gsprops.CollisionBox = new Cuboidf(0, 0, 0, 1, 0.125f, 1);
                 gsprops.PlaceRemoveSound = new AssetLocation("sounds/block/cloth");
                 AppendBehavior(obj, gsprops, new CollectibleBehaviorGroundStorable(obj));
                 AppendCreativeInventoryTabs(obj);
