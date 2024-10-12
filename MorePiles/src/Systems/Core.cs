@@ -1,7 +1,5 @@
 ﻿using Vintagestory.API.Common;
 
-[assembly: ModInfo(name: "More Piles", modID: "morepiles", Side = "Universal")]
-
 namespace MorePiles;
 
 public class Core : ModSystem
