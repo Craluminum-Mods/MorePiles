@@ -79,4 +79,21 @@
         "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.0625, "z2": 1 },
         "PlaceRemoveSound": "game:sounds/block/cloth"
     },
+    "flaxtwine": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": false,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 32,
+        "StackingModel": "morepiles:shapes/flaxtwinepile_8",
+        "CbScaleYByLayer": 0.25, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0.1875, "y1": 0, "z1": 0.1875, "x2": 0.8125, "y2": 0.125, "z2": 0.8125 },
+        "PlaceRemoveSound": "game:sounds/block/cloth",
+        "ModelItemsToStackSizeRatio": 1 // 24 elements, no idea why nothing works
+    }
 }
