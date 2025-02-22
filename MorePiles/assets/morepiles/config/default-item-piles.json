@@ -144,5 +144,21 @@
         "CollisionBox": { "x1": 0.0315, "y1": 0, "z1": 0.0315, "x2": 0.9685, "y2": 0.125, "z2": 0.9685 },
         "PlaceRemoveSound": "game:sounds/wearable/chain1"
     },
+    "metallamellae-*": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": false,
+        "UpSolid": false,
+        "BulkTransferQuantity": 4,
+        "TransferQuantity": 1,
+        "StackingCapacity": 8,
+        "StackingModel": "morepiles:shapes/metallamellaepile_32",
+        "CbScaleYByLayer": 1, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0.0315, "y1": 0, "z1": 0.0315, "x2": 0.9685, "y2": 0.125, "z2": 0.9685 },
+        "PlaceRemoveSound": "game:sounds/wearable/chain1"
+    },
     }
 }
