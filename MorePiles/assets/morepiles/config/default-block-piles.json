@@ -1,10 +1,10 @@
 {
     "angledgears-s": {
+        "Enabled": true,
         "__Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
-        "Enabled": true,
         "CtrlKey": true,
         "UpSolid": false,
         "BulkTransferQuantity": 4,
@@ -13,6 +13,22 @@
         "StackingModel": "morepiles:angledgearpile_4",
         "CbScaleYByLayer": 1, // 8 / StackingCapacity,
         "CollisionBox": { "x1": 0.1875, "y1": 0, "z1": 0.1875, "x2": 0.8215, "y2": 0.125, "z2": 0.8215 },
+        "PlaceRemoveSound": "game:sounds/block/stickplace"
+    },
+    "woodenaxle-ud": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 4,
+        "TransferQuantity": 1,
+        "StackingCapacity": 16,
+        "StackingModel": "morepiles:axlepile_16",
+        "CbScaleYByLayer": 0.25, // 4 / StackingCapacity,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
         "PlaceRemoveSound": "game:sounds/block/stickplace"
     }
 }
