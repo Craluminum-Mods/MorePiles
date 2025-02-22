@@ -30,7 +30,7 @@ public class Core : ModSystem
 
         foreach (CollectibleObject obj in api.World.Collectibles)
         {
-            if (obj.Code == null || obj.Id == 0 || obj.IsGroundStorable()) continue;
+            if (obj.Code == null || obj.Id == 0) continue;
 
             switch (obj.ItemClass)
             {
