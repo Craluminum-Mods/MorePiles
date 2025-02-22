@@ -1,3 +1,18 @@
 {
-    
+    "arrow-*": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:shapes/arrowpile_32",
+        "CbScaleYByLayer": 0.25, // 16 / StackingCapacity,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.0625, "z2": 1 },
+        "PlaceRemoveSound": "game:sounds/block/stickplace"
+    }
 }
