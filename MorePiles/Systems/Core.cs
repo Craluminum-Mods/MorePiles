@@ -44,7 +44,7 @@ public class Core : ModSystem
                             obj.RemoveGroundStorableBehaviors();
                         }
 
-                        obj.AppendBehavior(props.Value.Convert());
+                        obj.AppendBehavior(props.Value);
                         obj.AddToCreativeInventory();
                         break;
                     }
@@ -59,7 +59,7 @@ public class Core : ModSystem
                             obj.RemoveGroundStorableBehaviors();
                         }
 
-                        obj.AppendBehavior(props.Value.Convert());
+                        obj.AppendBehavior(props.Value);
                         obj.AddToCreativeInventory();
                         break;
                     }
