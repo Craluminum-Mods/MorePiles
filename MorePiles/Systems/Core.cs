@@ -39,12 +39,12 @@ public class Core : ModSystem
                     {
                         if (!obj.WildCardMatch(AssetLocation.Create(props.Key))) continue;
 
-                        if (props.Value.ForceReplace)
+                        if (props.Value.MorePilesProperties?.IsTrue("ForceReplace") == true)
                         {
                             obj.RemoveGroundStorableBehaviors();
                         }
 
-                        obj.AppendBehavior(props.Value);
+                        obj.AppendBehavior(props.Value.Convert());
                         obj.AddToCreativeInventory();
                         break;
                     }
@@ -54,12 +54,12 @@ public class Core : ModSystem
                     {
                         if (!obj.WildCardMatch(AssetLocation.Create(props.Key))) continue;
 
-                        if (props.Value.ForceReplace)
+                        if (props.Value.MorePilesProperties?.IsTrue("ForceReplace") == true)
                         {
                             obj.RemoveGroundStorableBehaviors();
                         }
 
-                        obj.AppendBehavior(props.Value);
+                        obj.AppendBehavior(props.Value.Convert());
                         obj.AddToCreativeInventory();
                         break;
                     }

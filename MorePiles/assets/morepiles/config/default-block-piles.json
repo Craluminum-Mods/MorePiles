@@ -1,8 +1,10 @@
 {
     "angledgears-s": {
-        "Comment": "",
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
         "Enabled": true,
-        "ForceReplace": true,
         "CtrlKey": true,
         "UpSolid": false,
         "BulkTransferQuantity": 4,
