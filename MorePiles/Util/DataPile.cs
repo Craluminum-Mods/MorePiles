@@ -8,13 +8,13 @@ namespace MorePiles;
 
 public class DataPile
 {
+    public bool Enabled { get; set; } = true;
+
     public string Comment { get; set; }
 
     [JsonProperty]
     [JsonConverter(typeof(JsonAttributesConverter))]
     public JsonObject MorePilesProperties { get; set; }
-
-    public bool Enabled { get; set; } = true;
 
     public bool CtrlKey { get; set; } = true;
 

@@ -39,7 +39,9 @@ public class Core : ModSystem
                     {
                         if (!obj.WildCardMatch(AssetLocation.Create(props.Key))) continue;
 
-                        if (props.Value.MorePilesProperties?.IsTrue("ForceReplace") == true)
+                        props.Value.EnsurePropertiesNotNull();
+
+                        if (props.Value.MorePilesProperties.IsTrue("ForceReplace") == true)
                         {
                             obj.RemoveGroundStorableBehaviors();
                         }
@@ -54,7 +56,9 @@ public class Core : ModSystem
                     {
                         if (!obj.WildCardMatch(AssetLocation.Create(props.Key))) continue;
 
-                        if (props.Value.MorePilesProperties?.IsTrue("ForceReplace") == true)
+                        props.Value.EnsurePropertiesNotNull();
+
+                        if (props.Value.MorePilesProperties.IsTrue("ForceReplace") == true)
                         {
                             obj.RemoveGroundStorableBehaviors();
                         }
