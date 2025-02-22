@@ -34,6 +34,8 @@ public class DataPile
 
     public CuboidfExtended CollisionBox { get; set; } = new CuboidfExtended();
 
+    public float? ModelItemsToStackSizeRatio { get; set; }
+
     public int GetShapeElementCount(ICoreAPI api)
     {
         int elementCount = 0;
@@ -48,6 +50,8 @@ public class DataPile
 
         return new GroundStoragePropertiesExtended()
         {
+            MorePilesProperties = MorePilesProperties,
+
             Layout = EnumGroundStorageLayout.Stacking,
             CtrlKey = CtrlKey,
             UpSolid = UpSolid,
@@ -58,9 +62,7 @@ public class DataPile
             StackingModel = StackingModel,
             CbScaleYByLayer = CbScaleYByLayer,
             CollisionBox = CollisionBox.Convert(),
-            MorePilesProperties = MorePilesProperties,
-
-            ModelItemsToStackSizeRatio = modelItemsToStackSizeRatio
+            ModelItemsToStackSizeRatio = ModelItemsToStackSizeRatio == null ? modelItemsToStackSizeRatio : (float)ModelItemsToStackSizeRatio
         };
     }
 
