@@ -28,7 +28,12 @@ public static class CollectibleObjectExtensions
 
     public static void AddToCreativeInventory(this CollectibleObject obj)
     {
-        if (obj.CreativeInventoryStacks != null)
+        if (obj.CreativeInventoryTabs != null && obj.CreativeInventoryTabs.Length != 0 && !obj.CreativeInventoryTabs.Contains("groundstorable"))
+        {
+            obj.CreativeInventoryTabs = obj.CreativeInventoryTabs.Append("groundstorable");
+            return;
+        }
+        if (obj.CreativeInventoryStacks?.Length > 0)
         {
             for (int i = 0; i < obj.CreativeInventoryStacks.Length; i++)
             {
@@ -38,11 +43,6 @@ public static class CollectibleObjectExtensions
                 }
                 obj.CreativeInventoryStacks[i].Tabs = obj.CreativeInventoryStacks[i].Tabs.Append("groundstorable");
             }
-            return;
-        }
-        if (obj.CreativeInventoryTabs != null && !obj.CreativeInventoryTabs.Contains("groundstorable"))
-        {
-            obj.CreativeInventoryTabs = obj.CreativeInventoryTabs.Append("groundstorable");
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MorePiles.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Vintagestory.API.Common;
@@ -46,7 +47,13 @@ public class Core : ModSystem
                 if (!item.WildCardMatch(AssetLocation.Create(props.Key))) continue;
 
                 props.Value.EnsurePropertiesNotNull();
-                TryRemoveBehaviors(item, props.Value.MorePilesProperties);
+
+                if (!CanReplaceBehavior(props.Value.MorePilesProperties, item))
+                {
+                    continue;
+                }
+
+                item.RemoveGroundStorableBehaviors();
 
                 if (GetClassesAsStrings(props.Value.MorePilesProperties) is string[] classes && classes != null && !classes.Contains(item.GetType().Name))
                 {
@@ -73,7 +80,13 @@ public class Core : ModSystem
                 if (!block.WildCardMatch(AssetLocation.Create(props.Key))) continue;
 
                 props.Value.EnsurePropertiesNotNull();
-                TryRemoveBehaviors(block, props.Value.MorePilesProperties);
+
+                if (!CanReplaceBehavior(props.Value.MorePilesProperties, block))
+                {
+                    continue;
+                }
+                
+                block.RemoveGroundStorableBehaviors();
 
                 if (GetClassesAsStrings(props.Value.MorePilesProperties) is string[] classes && classes != null && !classes.Contains(block.GetType().Name))
                 {
@@ -94,13 +107,7 @@ public class Core : ModSystem
         Mod.Logger.Event("started '{0}' mod ({1} ms)", Mod.Info.Name, api.World.ElapsedMilliseconds - elapsedMilliseconds);
     }
 
-    private static void TryRemoveBehaviors(CollectibleObject obj, JsonObject props)
-    {
-        if (props.IsTrue("ForceReplaceBehavior"))
-        {
-            obj.RemoveGroundStorableBehaviors();
-        }
-    }
+    private static bool CanReplaceBehavior(JsonObject props, CollectibleObject obj) => props.IsTrue("ForceReplaceBehavior") || !obj.IsGroundStorable();
 
     private static string GetShapeLocation(JsonObject props)
     {
