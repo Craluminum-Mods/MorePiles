@@ -1,7 +1,7 @@
 {
     "angledgears-s": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -17,7 +17,7 @@
     },
     "woodenaxle-ud": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -33,7 +33,7 @@
     },
     "torchholder-*-empty-north": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -49,7 +49,7 @@
     },
     "woodenfencegate-*-n-closed-left-free": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -66,7 +66,7 @@
     },
     "woodenfence-*-ew-free": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -83,7 +83,7 @@
     },
     "trapdoor-closed-up-north": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -100,7 +100,7 @@
     },
     "vanvar:trapdoor-*-closed-up-north": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -117,7 +117,7 @@
     },
     "toolrack-north": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -134,7 +134,7 @@
     },
     "vanvar:toolrack-*-north": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -151,7 +151,7 @@
     },
     "sign-ground-north": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -168,7 +168,7 @@
     },
     "vanvar:sign-*-ground-north": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -185,7 +185,7 @@
     },
     "drystonefence-*-ew-free": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -202,7 +202,7 @@
     },
     "ironfence-base-ew": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -219,7 +219,7 @@
     },
     "ironfence-top-ew": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -236,7 +236,7 @@
     },
     "ladder-wood-north": {
         "Enabled": true,
-        "__Comment": "Wooden ladder (vanilla)",
+        "Comment": "Wooden ladder (vanilla)",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -253,7 +253,7 @@
     },
     "ladder-rope-north": {
         "Enabled": true,
-        "__Comment": "Rope ladder (vanilla)",
+        "Comment": "Rope ladder (vanilla)",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -270,7 +270,7 @@
     },
     "vanvar:ladder-*-north": {
         "Enabled": true,
-        "__Comment": "Wooden ladder (Vanilla Variants mod)",
+        "Comment": "Wooden ladder (Vanilla Variants mod)",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -287,7 +287,7 @@
     },
     "henbox-empty": {
         "Enabled": true,
-        "__Comment": "Henbox (vanilla)",
+        "Comment": "Henbox (vanilla)",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -304,7 +304,7 @@
     },
     "vanvar:henbox-*-empty": {
         "Enabled": true,
-        "__Comment": "Henbox (Vanilla Variants mod)",
+        "Comment": "Henbox (Vanilla Variants mod)",
         "MorePilesProperties": {
             "ForceReplace": true
         },

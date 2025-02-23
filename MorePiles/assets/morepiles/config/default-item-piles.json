@@ -1,7 +1,7 @@
 {
     "arrow-*": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -18,7 +18,7 @@
     },
     "beeswax": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -34,7 +34,7 @@
     },
     "bone": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -50,7 +50,7 @@
     },
     "cloth-*": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -66,7 +66,7 @@
     },
     "flaxfibers": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -83,7 +83,7 @@
     },
     "flaxtwine": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -100,7 +100,7 @@
     },
     "stick": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -116,7 +116,7 @@
     },
     "chutesection-*": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -133,7 +133,7 @@
     },
     "sail": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -149,7 +149,7 @@
     },
     "metalchain-*": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -165,7 +165,7 @@
     },
     "metallamellae-*": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -181,7 +181,7 @@
     },
     "metalscale-*": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
@@ -197,7 +197,7 @@
     },
     "stone-*": {
         "Enabled": true,
-        "__Comment": "",
+        "Comment": "",
         "MorePilesProperties": {
             "ForceReplace": true
         },
