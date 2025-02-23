@@ -1,5 +1,4 @@
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Vintagestory.API.Common;
@@ -13,8 +12,6 @@ public static class CollectibleObjectExtensions
 {
     public static void AppendBehavior(this CollectibleObject obj, object objectProperties)
     {
-        obj.CollectibleBehaviors ??= Array.Empty<CollectibleBehavior>();
-
         CollectibleBehaviorGroundStorable instance = new CollectibleBehaviorGroundStorable(obj);
         instance.Initialize(new JsonObject(JToken.FromObject(objectProperties)));
         obj.CollectibleBehaviors = new CollectibleBehavior[] { instance }.Append(obj.CollectibleBehaviors);
@@ -22,10 +19,8 @@ public static class CollectibleObjectExtensions
 
     public static void RemoveGroundStorableBehaviors(this CollectibleObject obj)
     {
-        obj.CollectibleBehaviors ??= Array.Empty<CollectibleBehavior>();
-
-        List<CollectibleBehavior> list = obj.CollectibleBehaviors.ToList();
-        list.RemoveAll(x => x is CollectibleBehaviorGroundStorable);
+        List<CollectibleBehavior> list = obj.CollectibleBehaviors?.ToList();
+        list?.RemoveAll(x => x is CollectibleBehaviorGroundStorable);
         obj.CollectibleBehaviors = list.ToArray();
     }
 
