@@ -2,10 +2,10 @@
     "type": "code",
     "modid": "morepiles",
     "name": "More Piles",
-    "version": "1.5.0",
+    "version": "2.0.0",
     "authors": ["Craluminum2413"],
     "contributors": ["Apache", "rar61"],
     "dependencies": {
-        "game": "1.19.0-pre.1"
+        "game": "1.19.0"
     }
 }
