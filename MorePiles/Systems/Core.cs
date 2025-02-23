@@ -21,6 +21,12 @@ public class Core : ModSystem
 
     public override void AssetsFinalize(ICoreAPI api)
     {
+        if (!api.Side.IsServer())
+        {
+            Mod.Logger.Event("started '{0}' mod", Mod.Info.Name);
+            return;
+        }
+
         long elapsedMilliseconds = api.World.ElapsedMilliseconds;
 
         Config = ModConfig.ReadConfig<ConfigMorePiles>(api, "MorePilesConfig.json");
