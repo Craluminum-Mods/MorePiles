@@ -30,5 +30,21 @@
         "CbScaleYByLayer": 0.25, // 4 / StackingCapacity,
         "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
         "PlaceRemoveSound": "game:block/stickplace"
+    },
+    "torchholder-*-empty-north": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 2,
+        "TransferQuantity": 1,
+        "StackingCapacity": 8,
+        "StackingModel": "morepiles:torchholderpile_8",
+        "CbScaleYByLayer": 0.5, // 4 / StackingCapacity,
+        "CollisionBox": { "x1": 0.188, "y1": 0, "z1": 0.188, "x2": 0.812, "y2": 0.25, "z2": 0.812 },
+        "PlaceRemoveSound": "game:block/ingot"
     }
 }
