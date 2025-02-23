@@ -48,7 +48,7 @@ public class Core : ModSystem
                 props.Value.EnsurePropertiesNotNull();
                 TryRemoveBehaviors(item, props.Value.MorePilesProperties);
 
-                if (GetClassesAsStrings(props.Value.MorePilesProperties) is string[] classes && !classes.Contains(item.GetType().Name))
+                if (GetClassesAsStrings(props.Value.MorePilesProperties) is string[] classes && classes != null && !classes.Contains(item.GetType().Name))
                 {
                     continue;
                 }
