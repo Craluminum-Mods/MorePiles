@@ -233,6 +233,57 @@
         "CollisionBox": { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.0625, "z2": 0.9375 },
         "PlaceRemoveSound": "game:block/ingot",
         "ModelItemsToStackSizeRatio": 3 // should be 160 / StackingCapacity = 2.5
+    },
+    "ladder-wood-north": {
+        "Enabled": true,
+        "__Comment": "Wooden ladder (vanilla)",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:ladderpile-wood_8",
+        "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.125, "z2": 0.875 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 5 // should be 320 / StackingCapacity = 5
+    },
+    "ladder-rope-north": {
+        "Enabled": true,
+        "__Comment": "Rope ladder (vanilla)",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:ladderpile-rope_8",
+        "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.125, "z2": 0.875 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 11 // should be 704 / StackingCapacity = 11
+    },
+    "vanvar:ladder-*-north": {
+        "Enabled": true,
+        "__Comment": "Wooden ladder (Vanilla Variants mod)",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:ladderpile-wood_8",
+        "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.125, "z2": 0.875 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 5 // should be 320 / StackingCapacity = 5
     }
 }
     
