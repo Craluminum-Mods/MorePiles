@@ -200,6 +200,39 @@
         "PlaceRemoveSound": "game:block/loosestone1",
         "ModelItemsToStackSizeRatio": 2 // should be 104 / StackingCapacity = 1.625
     },
+    "ironfence-base-ew": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:ironfencepile-base",
+        "CbScaleYByLayer": 0.25, // 16 / StackingCapacity,
+        "CollisionBox": { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.0625, "z2": 0.9375 },
+        "PlaceRemoveSound": "game:block/ingot",
+        "ModelItemsToStackSizeRatio": 2 // should be 112 / StackingCapacity = 1.75
+    },
+    "ironfence-top-ew": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:ironfencepile-top",
+        "CbScaleYByLayer": 0.25, // 16 / StackingCapacity,
+        "CollisionBox": { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.0625, "z2": 0.9375 },
+        "PlaceRemoveSound": "game:block/ingot",
+        "ModelItemsToStackSizeRatio": 3 // should be 160 / StackingCapacity = 2.5
     }
 }
     
