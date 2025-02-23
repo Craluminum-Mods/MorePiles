@@ -28,7 +28,7 @@ public static class CollectibleObjectExtensions
 
     public static void AddToCreativeInventory(this CollectibleObject obj)
     {
-        if (obj.CreativeInventoryTabs != null && obj.CreativeInventoryTabs.Length != 0 && !obj.CreativeInventoryTabs.Contains("groundstorable"))
+        if (obj.CreativeInventoryTabs?.Length > 0 && !obj.CreativeInventoryTabs.Contains("groundstorable"))
         {
             obj.CreativeInventoryTabs = obj.CreativeInventoryTabs.Append("groundstorable");
             return;
