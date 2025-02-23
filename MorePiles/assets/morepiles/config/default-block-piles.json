@@ -321,7 +321,7 @@
     },
     "@.*log.*ud": {
         "Enabled": true,
-        "__Comment": "Log pile (vanilla logs)",
+        "Comment": "Log pile (vanilla logs)",
         "MorePilesProperties": {
             "ForceReplace": true,
             "MatchesShape": "game:block/basic/cube",
@@ -335,7 +335,7 @@
         "StackingModel": "morepiles:cubelogpile_64",
         "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
         "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 },
-        "PlaceRemoveSound": "game:block/player/build",
+        "PlaceRemoveSound": "game:block/planks",
         "ModelItemsToStackSizeRatio": 1 // should be 64 / StackingCapacity = 1
     },
     }
