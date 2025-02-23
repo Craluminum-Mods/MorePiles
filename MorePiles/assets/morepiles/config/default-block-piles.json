@@ -319,6 +319,11 @@
         "PlaceRemoveSound": "game:block/planks",
         "ModelItemsToStackSizeRatio": 5 // should be 320 / StackingCapacity = 5
     },
+
+    // // ###################
+    // // ### Cubic Piles ###
+    // // ###################
+
     "@.*log.*ud": {
         "Enabled": true,
         "Comment": "Log pile (vanilla logs)",
@@ -338,5 +343,22 @@
         "PlaceRemoveSound": "game:block/planks",
         "ModelItemsToStackSizeRatio": 1 // should be 64 / StackingCapacity = 1
     },
+    "*": {
+        "Enabled": true,
+        "Comment": "Any blocks with simple CUBE shape",
+        "MorePilesProperties": {
+            "ForceReplaceBehavior": false,
+            "MatchesShape": "game:block/basic/cube"
+        },
+        "CtrlKey": true,
+        "UpSolid": true,
+        "BulkTransferQuantity": 4,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:cubepile_64",
+        "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 },
+        "PlaceRemoveSound": "game:player/build",
+        "ModelItemsToStackSizeRatio": 1 // should be 64 / StackingCapacity = 1
     }
 }
