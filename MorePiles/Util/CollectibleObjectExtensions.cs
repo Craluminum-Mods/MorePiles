@@ -14,7 +14,7 @@ public static class CollectibleObjectExtensions
     {
         CollectibleBehaviorGroundStorable instance = new CollectibleBehaviorGroundStorable(obj);
         instance.Initialize(new JsonObject(JToken.FromObject(objectProperties)));
-        obj.CollectibleBehaviors = obj.CollectibleBehaviors.Append(instance);
+        obj.CollectibleBehaviors = new CollectibleBehavior[] { instance }.Append(obj.CollectibleBehaviors);
     }
 
     public static void RemoveGroundStorableBehaviors(this CollectibleObject obj)
