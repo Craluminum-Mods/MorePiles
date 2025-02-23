@@ -284,7 +284,39 @@
         "CollisionBox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.125, "z2": 0.875 },
         "PlaceRemoveSound": "game:block/planks",
         "ModelItemsToStackSizeRatio": 5 // should be 320 / StackingCapacity = 5
+    },
+    "henbox-empty": {
+        "Enabled": true,
+        "__Comment": "Henbox (vanilla)",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:henboxpile_4",
+        "CbScaleYByLayer": 0.0625, // 4 / StackingCapacity,
+        "CollisionBox": { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.25, "z2": 0.9375 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 5 // should be 320 / StackingCapacity = 5
+    },
+    "vanvar:henbox-*-empty": {
+        "Enabled": true,
+        "__Comment": "Henbox (Vanilla Variants mod)",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:henboxpile_4",
+        "CbScaleYByLayer": 0.0625, // 4 / StackingCapacity,
+        "CollisionBox": { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.25, "z2": 0.9375 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 5 // should be 320 / StackingCapacity = 5
     }
-}
-    
 }
