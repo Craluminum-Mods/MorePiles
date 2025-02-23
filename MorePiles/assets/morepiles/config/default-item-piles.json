@@ -13,7 +13,8 @@
         "StackingModel": "morepiles:arrowpile_32",
         "CbScaleYByLayer": 0.25, // 16 / StackingCapacity,
         "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.0625, "z2": 1 },
-        "PlaceRemoveSound": "game:block/stickplace"
+        "PlaceRemoveSound": "game:block/stickplace",
+        "ModelItemsToStackSizeRatio": 6 // should be ??? / StackingCapacity
     },
     "beeswax": {
         "Enabled": true,
@@ -77,7 +78,8 @@
         "StackingModel": "morepiles:flaxfiberspile_16",
         "CbScaleYByLayer": 0.125, // 16 / StackingCapacity,
         "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.0625, "z2": 1 },
-        "PlaceRemoveSound": "game:block/cloth"
+        "PlaceRemoveSound": "game:block/cloth",
+        "ModelItemsToStackSizeRatio": 2 // should be ??? / StackingCapacity
     },
     "flaxtwine": {
         "Enabled": true,
