@@ -1,6 +1,9 @@
 ﻿using MorePiles.Configuration;
 using System.Collections.Generic;
+using System.Linq;
 using Vintagestory.API.Common;
+using Vintagestory.API.Datastructures;
+using Vintagestory.API.Util;
 
 namespace MorePiles;
 
@@ -34,49 +37,78 @@ public class Core : ModSystem
         Dictionary<string, GroundStoragePropertiesExtended> items = DataPile.GetPropsFromAll(api, Config.ItemPiles);
         Dictionary<string, GroundStoragePropertiesExtended> blocks = DataPile.GetPropsFromAll(api, Config.BlockPiles);
 
-        foreach (CollectibleObject obj in api.World.Collectibles)
+        foreach (Item item in api.World.Items)
         {
-            if (obj.Code == null || obj.Id == 0) continue;
+            if (item.Code == null || item.Id == 0) continue;
 
-            switch (obj.ItemClass)
+            foreach (KeyValuePair<string, GroundStoragePropertiesExtended> props in items)
             {
-                case EnumItemClass.Block:
-                    foreach (KeyValuePair<string, GroundStoragePropertiesExtended> props in blocks)
-                    {
-                        if (!obj.WildCardMatch(AssetLocation.Create(props.Key))) continue;
+                if (!item.WildCardMatch(AssetLocation.Create(props.Key))) continue;
 
-                        props.Value.EnsurePropertiesNotNull();
+                props.Value.EnsurePropertiesNotNull();
+                TryRemoveBehaviors(item, props.Value.MorePilesProperties);
 
-                        if (props.Value.MorePilesProperties.IsTrue("ForceReplace") == true)
-                        {
-                            obj.RemoveGroundStorableBehaviors();
-                        }
+                if (GetClassesAsStrings(props.Value.MorePilesProperties) is string[] classes && !classes.Contains(item.GetType().Name))
+                {
+                    continue;
+                }
 
-                        obj.AppendBehavior(props.Value);
-                        obj.AddToCreativeInventory();
-                        break;
-                    }
-                    break;
-                case EnumItemClass.Item:
-                    foreach (KeyValuePair<string, GroundStoragePropertiesExtended> props in items)
-                    {
-                        if (!obj.WildCardMatch(AssetLocation.Create(props.Key))) continue;
+                if (GetShapeLocation(props.Value.MorePilesProperties) is string shapeLoc && shapeLoc != null && item.Shape?.Base != shapeLoc)
+                {
+                    continue;
+                }
 
-                        props.Value.EnsurePropertiesNotNull();
+                item.AppendBehavior(props.Value);
+                item.AddToCreativeInventory();
+                break;
+            }
+        }
 
-                        if (props.Value.MorePilesProperties.IsTrue("ForceReplace") == true)
-                        {
-                            obj.RemoveGroundStorableBehaviors();
-                        }
+        foreach (Block block in api.World.Blocks)
+        {
+            if (block.Code == null || block.Id == 0) continue;
 
-                        obj.AppendBehavior(props.Value);
-                        obj.AddToCreativeInventory();
-                        break;
-                    }
-                    break;
+            foreach (KeyValuePair<string, GroundStoragePropertiesExtended> props in blocks)
+            {
+                if (!block.WildCardMatch(AssetLocation.Create(props.Key))) continue;
+
+                props.Value.EnsurePropertiesNotNull();
+                TryRemoveBehaviors(block, props.Value.MorePilesProperties);
+
+                if (GetClassesAsStrings(props.Value.MorePilesProperties) is string[] classes && classes != null && !classes.Contains(block.GetType().Name))
+                {
+                    continue;
+                }
+
+                if (GetShapeLocation(props.Value.MorePilesProperties) is string shapeLoc && shapeLoc != null && block.Shape?.Base != shapeLoc)
+                {
+                    continue;
+                }
+
+                block.AppendBehavior(props.Value);
+                block.AddToCreativeInventory();
+                break;
             }
         }
 
         Mod.Logger.Event("started '{0}' mod ({1} ms)", Mod.Info.Name, api.World.ElapsedMilliseconds - elapsedMilliseconds);
+    }
+
+    private static void TryRemoveBehaviors(CollectibleObject obj, JsonObject props)
+    {
+        if (props.IsTrue("ForceReplace"))
+        {
+            obj.RemoveGroundStorableBehaviors();
+        }
+    }
+
+    private static string GetShapeLocation(JsonObject props)
+    {
+        return props.KeyExists("MatchesShape") ? props["MatchesShape"].AsString() : null;
+    }
+
+    private static string[] GetClassesAsStrings(JsonObject props)
+    {
+        return props.KeyExists("MatchesClasses") ? props["MatchesClasses"].AsObject<string[]>() : null;
     }
 }
