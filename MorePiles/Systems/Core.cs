@@ -96,7 +96,7 @@ public class Core : ModSystem
 
     private static void TryRemoveBehaviors(CollectibleObject obj, JsonObject props)
     {
-        if (props.IsTrue("ForceReplace"))
+        if (props.IsTrue("ForceReplaceBehavior"))
         {
             obj.RemoveGroundStorableBehaviors();
         }

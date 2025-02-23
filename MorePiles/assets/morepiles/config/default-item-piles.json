@@ -3,7 +3,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": false,
@@ -20,7 +20,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": false,
@@ -36,7 +36,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": false,
@@ -52,7 +52,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": false,
@@ -68,7 +68,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": false,
@@ -85,7 +85,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": false,
@@ -102,7 +102,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": false,
@@ -118,7 +118,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": true,
@@ -135,7 +135,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": false,
@@ -151,7 +151,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": false,
@@ -167,7 +167,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": false,
@@ -183,7 +183,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": false,
         "UpSolid": false,
@@ -199,7 +199,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
-            "ForceReplace": true
+            "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
         "UpSolid": true,
