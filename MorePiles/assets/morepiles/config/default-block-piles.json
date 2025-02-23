@@ -149,6 +149,39 @@
         "PlaceRemoveSound": "game:block/planks",
         "ModelItemsToStackSizeRatio": 5
     },
+    "sign-ground-north": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:signpile_8",
+        "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.125, "z2": 0.875 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 5 // 320 / StackingCapacity
+    },
+    "vanvar:sign-*-ground-north": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:signpile_8",
+        "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.125, "z2": 0.875 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 5 // 320 / StackingCapacity
     }
 }
     
