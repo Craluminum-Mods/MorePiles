@@ -182,6 +182,24 @@
         "CollisionBox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.125, "z2": 0.875 },
         "PlaceRemoveSound": "game:block/planks",
         "ModelItemsToStackSizeRatio": 5 // 320 / StackingCapacity
+    },
+    "drystonefence-*-ew-free": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:drystonefencepile_8",
+        "CbScaleYByLayer": 0.0625, // 4 / StackingCapacity,
+        "CollisionBox": { "x1": 0.25, "y1": 0, "z1": 0.25, "x2": 0.75, "y2": 0.25, "z2": 0.75 },
+        "PlaceRemoveSound": "game:block/loosestone1",
+        "ModelItemsToStackSizeRatio": 2 // should be 104 / StackingCapacity = 1.625
+    },
     }
 }
     
