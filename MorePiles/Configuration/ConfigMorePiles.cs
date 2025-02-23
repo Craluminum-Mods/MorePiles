@@ -11,9 +11,12 @@ public class ConfigMorePiles : IModConfig
     public bool AutoFill { get; set; } = true;
 
     [JsonProperty(Order = 2)]
-    public Dictionary<string, DataPile> ItemPiles { get; set; } = new();
+    public string Description => "AutoFill defaults entire config file every time you load any world. You need to disable it in order to make changes";
 
     [JsonProperty(Order = 3)]
+    public Dictionary<string, DataPile> ItemPiles { get; set; } = new();
+
+    [JsonProperty(Order = 4)]
     public Dictionary<string, DataPile> BlockPiles { get; set; } = new();
 
     public ConfigMorePiles(ICoreAPI api, ConfigMorePiles previousConfig = null)
