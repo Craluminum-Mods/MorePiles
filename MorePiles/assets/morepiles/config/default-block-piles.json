@@ -114,6 +114,41 @@
         "CollisionBox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.125, "z2": 0.875 },
         "PlaceRemoveSound": "game:block/planks",
         "ModelItemsToStackSizeRatio": 5
+    },
+    "toolrack-north": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:toolrackpile_16",
+        "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0.1565, "y1": 0, "z1": 0.1565, "x2": 0.8435, "y2": 0.125, "z2": 0.8435 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 5
+    },
+    "vanvar:toolrack-*-north": {
+        "Enabled": true,
+        "__Comment": "",
+        "MorePilesProperties": {
+            "ForceReplace": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:toolrackpile_16",
+        "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0.1565, "y1": 0, "z1": 0.1565, "x2": 0.8435, "y2": 0.125, "z2": 0.8435 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 5
+    },
     }
 }
     
