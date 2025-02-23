@@ -31,6 +31,8 @@ public class ConfigMorePiles : IModConfig
 
         if (api != null && AutoFill)
         {
+            ItemPiles.Clear();
+            BlockPiles.Clear();
             FillDefault(api);
         }
     }
