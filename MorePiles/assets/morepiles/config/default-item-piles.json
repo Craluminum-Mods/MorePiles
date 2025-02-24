@@ -226,6 +226,6 @@
         "StackingModel": "morepiles:shapes/ropepile_32",
         "CbScaleYByLayer": 0.25, // 8 / StackingCapacity,
         "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 },
-        "PlaceRemoveSound": "game:sounds/block/cloth"
+        "PlaceRemoveSound": "game:block/cloth"
     }
 }
