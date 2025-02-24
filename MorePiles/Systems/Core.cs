@@ -82,8 +82,10 @@ public class Core : ModSystem
                     continue;
                 }
 
-                item.ResolveStackingTextures(props.Value);
-                item.AppendBehavior(props.Value);
+                GroundStoragePropertiesExtended newProps = props.Value.Clone();
+                item.ResolveStackingTextures(newProps);
+                item.AppendBehavior(newProps);
+
                 item.AddToCreativeInventory();
                 break;
             }
@@ -116,8 +118,10 @@ public class Core : ModSystem
                     continue;
                 }
 
-                block.ResolveStackingTextures(props.Value);
-                block.AppendBehavior(props.Value);
+                GroundStoragePropertiesExtended newProps = props.Value.Clone();
+                block.ResolveStackingTextures(newProps);
+                block.AppendBehavior(newProps);
+
                 block.AddToCreativeInventory();
                 break;
             }
