@@ -32,12 +32,14 @@ public class Core : ModSystem
 
     public override void AssetsLoaded(ICoreAPI api)
     {
-        if (api.Side.IsServer())
+        if (!api.Side.IsServer())
         {
-            DefaultItemPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-item-piles.json")).ToObject<Dictionary<string, DataPile>>();
-            DefaultBlockPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-block-piles.json")).ToObject<Dictionary<string, DataPile>>();
-            Config = ModConfig.ReadConfig<ConfigMorePiles>(api, "MorePilesConfig.json");
+            return;
         }
+
+        DefaultItemPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-item-piles.json")).ToObject<Dictionary<string, DataPile>>();
+        DefaultBlockPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-block-piles.json")).ToObject<Dictionary<string, DataPile>>();
+        Config = ModConfig.ReadConfig<ConfigMorePiles>(api, "MorePilesConfig.json");
     }
 
     public override void AssetsFinalize(ICoreAPI api)
@@ -80,6 +82,7 @@ public class Core : ModSystem
                     continue;
                 }
 
+                item.ResolveStackingTextures(props.Value);
                 item.AppendBehavior(props.Value);
                 item.AddToCreativeInventory();
                 break;
@@ -100,7 +103,7 @@ public class Core : ModSystem
                 {
                     continue;
                 }
-                
+
                 block.RemoveGroundStorableBehaviors();
 
                 if (GetClassesAsStrings(props.Value.MorePilesProperties) is string[] classes && classes != null && !classes.Contains(block.GetType().Name))
@@ -113,6 +116,7 @@ public class Core : ModSystem
                     continue;
                 }
 
+                block.ResolveStackingTextures(props.Value);
                 block.AppendBehavior(props.Value);
                 block.AddToCreativeInventory();
                 break;

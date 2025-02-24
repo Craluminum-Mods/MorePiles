@@ -30,6 +30,8 @@ public class DataPile
 
     public AssetLocation StackingModel { get; set; } = new AssetLocation();
 
+    public Dictionary<string, AssetLocation> StackingTextures { get; set; }
+
     public float CbScaleYByLayer { get; set; }
 
     public CuboidfExtended CollisionBox { get; set; } = new CuboidfExtended();
@@ -60,6 +62,7 @@ public class DataPile
             StackingCapacity = StackingCapacity,
             PlaceRemoveSound = PlaceRemoveSound,
             StackingModel = StackingModel,
+            StackingTextures = StackingTextures,
             CbScaleYByLayer = CbScaleYByLayer,
             CollisionBox = CollisionBox.Convert(),
             ModelItemsToStackSizeRatio = ModelItemsToStackSizeRatio == null ? modelItemsToStackSizeRatio : (float)ModelItemsToStackSizeRatio

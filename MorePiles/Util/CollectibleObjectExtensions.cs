@@ -34,6 +34,30 @@ public static class CollectibleObjectExtensions
         obj.CollectibleBehaviors = list.ToArray();
     }
 
+    public static void ResolveStackingTextures(this CollectibleObject obj, GroundStoragePropertiesExtended props)
+    {
+        if (props.StackingTextures == null)
+        {
+            return;
+        }
+
+        Dictionary<string, AssetLocation> stackingTextures = new Dictionary<string, AssetLocation>();
+
+        foreach (KeyValuePair<string, AssetLocation> texture in props.StackingTextures)
+        {
+            KeyValuePair<string, AssetLocation> newTexture = texture;
+
+            foreach (KeyValuePair<string, string> variant in obj.Variant)
+            {
+                newTexture.Value.Path = texture.Value.Path.Replace("{" + variant.Key + "}", variant.Value);
+            }
+
+            stackingTextures.Add(newTexture.Key, newTexture.Value);
+        }
+
+        props.StackingTextures = stackingTextures;
+    }
+
     public static bool IsGroundStorable(this CollectibleObject obj) => obj.HasBehavior<CollectibleBehaviorGroundStorable>();
     public static CollectibleBehaviorGroundStorable GetGroundStorableBehavior(this ItemSlot slot) => slot?.Itemstack?.Collectible?.GetBehavior<CollectibleBehaviorGroundStorable>();
 
