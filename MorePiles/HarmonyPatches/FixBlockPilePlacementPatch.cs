@@ -5,7 +5,7 @@ using Vintagestory.GameContent;
 namespace MorePiles;
 
 [HarmonyPatch(typeof(Block), nameof(Block.CanPlaceBlock))]
-public static class FixGroundStorableBlocksPlacementPatch
+public static class FixBlockPilePlacementPatch
 {
     [HarmonyPrefix]
     public static bool Prefix(Block __instance, ref bool __result, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref string failureCode)

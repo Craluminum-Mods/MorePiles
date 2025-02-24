@@ -5,7 +5,7 @@ using Vintagestory.GameContent;
 namespace MorePiles;
 
 [HarmonyPatch(typeof(ItemRope), nameof(ItemRope.OnHeldInteractStart))]
-public static class ItemRope_OnHeldInteractStart_Patch
+public static class FixRopePilePlacementPatch
 {
     [HarmonyPrefix]
     public static bool Prefix(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
