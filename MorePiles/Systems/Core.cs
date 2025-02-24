@@ -13,8 +13,7 @@ public class Core : ModSystem
 {
     public const string HarmonyID = "craluminum2413.morepiles";
     public Harmony HarmonyInstance => new Harmony(HarmonyID);
-
-    public static ConfigMorePiles Config { get; private set; }
+    public ConfigMorePiles Config { get; private set; }
 
     public Dictionary<string, DataPile> DefaultItemPiles { get; private set; }
     public Dictionary<string, DataPile> DefaultBlockPiles { get; private set; }
@@ -33,8 +32,12 @@ public class Core : ModSystem
 
     public override void AssetsLoaded(ICoreAPI api)
     {
-        DefaultItemPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-item-piles.json")).ToObject<Dictionary<string, DataPile>>();
-        DefaultBlockPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-block-piles.json")).ToObject<Dictionary<string, DataPile>>();
+        if (api.Side.IsServer())
+        {
+            DefaultItemPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-item-piles.json")).ToObject<Dictionary<string, DataPile>>();
+            DefaultBlockPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-block-piles.json")).ToObject<Dictionary<string, DataPile>>();
+            Config = ModConfig.ReadConfig<ConfigMorePiles>(api, "MorePilesConfig.json");
+        }
     }
 
     public override void AssetsFinalize(ICoreAPI api)
@@ -46,8 +49,6 @@ public class Core : ModSystem
         }
 
         long elapsedMilliseconds = api.World.ElapsedMilliseconds;
-
-        Config = ModConfig.ReadConfig<ConfigMorePiles>(api, "MorePilesConfig.json");
 
         Dictionary<string, GroundStoragePropertiesExtended> items = DataPile.GetPropsFromAll(api, Config.ItemPiles);
         Dictionary<string, GroundStoragePropertiesExtended> blocks = DataPile.GetPropsFromAll(api, Config.BlockPiles);
