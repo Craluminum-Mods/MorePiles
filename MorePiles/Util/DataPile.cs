@@ -48,7 +48,7 @@ public class DataPile
 
     public GroundStoragePropertiesExtended GetProps(ICoreAPI api)
     {
-        float modelItemsToStackSizeRatio = (float)GetShapeElementCount(api) / StackingCapacity;
+        float modelItemsToStackSizeRatio = ModelItemsToStackSizeRatio == null ? (float)GetShapeElementCount(api) / (float)StackingCapacity : (float)ModelItemsToStackSizeRatio;
 
         return new GroundStoragePropertiesExtended()
         {
@@ -65,7 +65,7 @@ public class DataPile
             StackingTextures = StackingTextures,
             CbScaleYByLayer = CbScaleYByLayer,
             CollisionBox = CollisionBox.Convert(),
-            ModelItemsToStackSizeRatio = ModelItemsToStackSizeRatio == null ? modelItemsToStackSizeRatio : (float)ModelItemsToStackSizeRatio
+            ModelItemsToStackSizeRatio = modelItemsToStackSizeRatio
         };
     }
 
@@ -77,7 +77,7 @@ public class DataPile
         {
             if (!elem.Value.Enabled) continue;
 
-            dict.Add(elem.Key, elem.Value.GetProps(api));
+            dict.Add(elem.Key, elem.Value.GetProps(api).Clone());
         }
 
         return dict;

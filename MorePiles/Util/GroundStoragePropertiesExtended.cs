@@ -25,7 +25,7 @@ public class GroundStoragePropertiesExtended : GroundStorageProperties
             MorePilesProperties = MorePilesProperties?.Clone(),
             Layout = Layout,
             WallOffY = WallOffY,
-            PlaceRemoveSound = PlaceRemoveSound,
+            PlaceRemoveSound = PlaceRemoveSound?.Clone(),
             RandomizeSoundPitch = RandomizeSoundPitch,
             StackingCapacity = StackingCapacity,
             StackingModel = StackingModel?.Clone(),
@@ -33,12 +33,13 @@ public class GroundStoragePropertiesExtended : GroundStorageProperties
             MaxStackingHeight = MaxStackingHeight,
             TransferQuantity = TransferQuantity,
             BulkTransferQuantity = BulkTransferQuantity,
-            CollisionBox = CollisionBox,
-            SelectionBox = SelectionBox,
+            CollisionBox = CollisionBox?.Clone(),
+            SelectionBox = SelectionBox?.Clone(),
             CbScaleYByLayer = CbScaleYByLayer,
             MaxFireable = MaxFireable,
             CtrlKey = CtrlKey,
-            UpSolid = UpSolid
+            UpSolid = UpSolid,
+            ModelItemsToStackSizeRatio = ModelItemsToStackSizeRatio
         };
     }
 }
