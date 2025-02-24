@@ -3,6 +3,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -19,6 +20,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -35,6 +37,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -51,6 +54,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -68,6 +72,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -85,6 +90,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -102,6 +108,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -119,6 +126,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -136,6 +144,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -153,6 +162,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -170,6 +180,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -187,6 +198,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -204,6 +216,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -221,6 +234,7 @@
         "Enabled": true,
         "Comment": "",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -238,6 +252,7 @@
         "Enabled": true,
         "Comment": "Wooden ladder (vanilla)",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -255,6 +270,7 @@
         "Enabled": true,
         "Comment": "Rope ladder (vanilla)",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -272,6 +288,7 @@
         "Enabled": true,
         "Comment": "Wooden ladder (Vanilla Variants mod)",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -289,6 +306,7 @@
         "Enabled": true,
         "Comment": "Henbox (vanilla)",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -306,6 +324,7 @@
         "Enabled": true,
         "Comment": "Henbox (Vanilla Variants mod)",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
         "CtrlKey": true,
@@ -328,6 +347,7 @@
         "Enabled": true,
         "Comment": "Log pile (vanilla logs)",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true,
             "MatchesShape": "game:block/basic/cube",
             "MatchesClasses": ["BlockLog"]
@@ -347,6 +367,7 @@
         "Enabled": true,
         "Comment": "Any blocks with simple CUBE shape",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": false,
             "MatchesShape": "game:block/basic/cube"
         },

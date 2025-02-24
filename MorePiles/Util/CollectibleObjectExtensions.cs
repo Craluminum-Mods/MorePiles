@@ -10,6 +10,16 @@ namespace MorePiles;
 
 public static class CollectibleObjectExtensions
 {
+    public static JsonObject GetProperties(this CollectibleBehavior behavior)
+    {
+        return new JsonObject(JToken.Parse(behavior.propertiesAtString));
+    }
+
+    public static bool CanFixPlacement(this CollectibleBehaviorGroundStorable behavior)
+    {
+        return behavior.GetProperties()?["MorePilesProperties"]?.IsTrue("FixPlacement") == true;
+    }
+
     public static void AppendBehavior(this CollectibleObject obj, object objectProperties)
     {
         CollectibleBehaviorGroundStorable instance = new CollectibleBehaviorGroundStorable(obj);
@@ -25,6 +35,7 @@ public static class CollectibleObjectExtensions
     }
 
     public static bool IsGroundStorable(this CollectibleObject obj) => obj.HasBehavior<CollectibleBehaviorGroundStorable>();
+    public static CollectibleBehaviorGroundStorable GetGroundStorableBehavior(this ItemSlot slot) => slot?.Itemstack?.Collectible?.GetBehavior<CollectibleBehaviorGroundStorable>();
 
     public static void AddToCreativeInventory(this CollectibleObject obj)
     {

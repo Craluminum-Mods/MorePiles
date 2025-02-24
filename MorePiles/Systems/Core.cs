@@ -1,4 +1,5 @@
-﻿using MorePiles.Configuration;
+﻿using HarmonyLib;
+using MorePiles.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,25 @@ namespace MorePiles;
 
 public class Core : ModSystem
 {
+    public const string HarmonyID = "craluminum2413.morepiles";
+    public Harmony HarmonyInstance => new Harmony(HarmonyID);
+
     public static ConfigMorePiles Config { get; private set; }
 
     public Dictionary<string, DataPile> DefaultItemPiles { get; private set; }
     public Dictionary<string, DataPile> DefaultBlockPiles { get; private set; }
 
     public static Core GetInstance(ICoreAPI api) => api.ModLoader.GetModSystem<Core>();
+
+    public override void StartPre(ICoreAPI api)
+    {
+        HarmonyInstance.PatchAll();
+    }
+
+    public override void Dispose()
+    {
+        HarmonyInstance.UnpatchAll(HarmonyID);
+    }
 
     public override void AssetsLoaded(ICoreAPI api)
     {
