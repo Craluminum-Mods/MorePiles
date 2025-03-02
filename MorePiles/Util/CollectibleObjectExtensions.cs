@@ -80,4 +80,27 @@ public static class CollectibleObjectExtensions
             }
         }
     }
+
+    public static bool TryFixGroundStoragePlacement(this ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling)
+    {
+        if (slot == null || blockSel == null || byEntity == null)
+        {
+            return true;
+        }
+
+        bool pressedCtrlKey = byEntity.Controls.CtrlKey;
+        CollectibleBehaviorGroundStorable behavior = byEntity.ActiveHandItemSlot?.GetGroundStorableBehavior();
+        bool requiresCtrlKey = behavior?.StorageProps.CtrlKey == true;
+
+        if (behavior == null || !behavior.CanFixPlacement() || (requiresCtrlKey && !pressedCtrlKey))
+        {
+            return true;
+        }
+
+        EnumHandling _handling = EnumHandling.PassThrough;
+
+        behavior.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handHandling, ref _handling);
+
+        return false;
+    }
 }
