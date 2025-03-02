@@ -7,6 +7,13 @@ namespace MorePiles;
 [HarmonyPatch]
 public static class GroundStoragePatches
 {
+    [HarmonyPatch(typeof(ItemDryGrass), nameof(ItemDryGrass.OnHeldInteractStart))]
+    public static class FixDryGrassGroundStoragePlacementPatch
+    {
+        public static bool Prefix(ItemSlot itemslot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling)
+            => itemslot.TryFixGroundStoragePlacement(byEntity, blockSel, entitySel, firstEvent, ref handHandling);
+    }
+
     [HarmonyPatch(typeof(ItemRope), nameof(ItemRope.OnHeldInteractStart))]
     public static class FixRopePilePlacement
     {

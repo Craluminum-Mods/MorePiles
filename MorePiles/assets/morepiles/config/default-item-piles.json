@@ -227,5 +227,44 @@
         "CbScaleYByLayer": 0.25, // 8 / StackingCapacity,
         "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 },
         "PlaceRemoveSound": "game:block/cloth"
+    },
+    "drygrass": {
+        "Enabled": true,
+        "Comment": "Dry grass (vanilla). Models: [ 'drygrasspile_64-optimized', 'drygrasspile_64-heavy' ]",
+        "MorePilesProperties": {
+            "FixPlacement": true,
+            "ForceReplaceBehavior": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 4,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:shapes/drygrasspile_64-optimized",
+        "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 }
+        // "PlaceRemoveSound": "game:block/cloth"
+        // ModelItemsToStackSizeRatio info:
+        // optimized - 11
+        // heavy - 20
+    },
+    "thatch": {
+        "Enabled": true,
+        "Comment": "Thatch (vanilla). Models: [ 'thatchpile_64-optimized', 'thatchpile_64-heavy' ]",
+        "MorePilesProperties": {
+            "ForceReplaceBehavior": true
+        },
+        "CtrlKey": false,
+        "UpSolid": false,
+        "BulkTransferQuantity": 4,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:shapes/thatchpile_64-optimized",
+        "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 }
+        // "PlaceRemoveSound": "game:block/cloth"
+        // ModelItemsToStackSizeRatio info:
+        // optimized - 8
+        // heavy - 20
     }
 }
