@@ -22,6 +22,13 @@ public static class GroundStoragePatches
             => slot.TryFixGroundStoragePlacement(byEntity, blockSel, entitySel, firstEvent, ref handling);
     }
 
+    [HarmonyPatch(typeof(ItemFlint), nameof(ItemFlint.OnHeldInteractStart))]
+    public static class FixFlintGroundStoragePlacementPatch
+    {
+        public static bool Prefix(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
+            => slot.TryFixGroundStoragePlacement(byEntity, blockSel, entitySel, firstEvent, ref handling);
+    }
+
     [HarmonyPatch(typeof(BlockBehaviorDecor), nameof(BlockBehaviorDecor.TryPlaceBlock))]
     public static class FixDecorPilePlacement
     {

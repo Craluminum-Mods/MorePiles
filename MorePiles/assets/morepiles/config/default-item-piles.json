@@ -34,11 +34,12 @@
     },
     "bone": {
         "Enabled": true,
-        "Comment": "",
+        "Comment": "Bone (vanilla)",
         "MorePilesProperties": {
+            "FixPlacement": true,
             "ForceReplaceBehavior": true
         },
-        "CtrlKey": false,
+        "CtrlKey": true,
         "UpSolid": false,
         "BulkTransferQuantity": 8,
         "TransferQuantity": 1,
