@@ -432,17 +432,50 @@
         "StackingModel": "morepiles:cubelogpile_64",
         "StackingTextures": null,
         "CbScaleYByLayer": 0.125,
-        "CollisionBox": {
-            "X1": 0.0,
-            "Y1": 0.0,
-            "Z1": 0.0,
-            "X2": 1.0,
-            "Y2": 0.125,
-            "Z2": 1.0
-        },
+        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
         "ModelItemsToStackSizeRatio": 1.0
     },
-
+    "wildcrafttree:debarkedlog-*-ud": {
+        "Enabled": true,
+        "Comment": "Debarked log pile (Wildcraft Trees debarked logs)",
+        "MorePilesProperties": {
+            "FixPlacement": true,
+            "ForceReplaceBehavior": true,
+            "MatchesShape": "game:block/basic/cube",
+            "MatchesClasses": ["BlockLog"]
+        },
+        "CtrlKey": true,
+        "UpSolid": true,
+        "BulkTransferQuantity": 4,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "PlaceRemoveSound": "game:block/planks",
+        "StackingModel": "morepiles:cubelogpile_64",
+        "StackingTextures": null,
+        "CbScaleYByLayer": 0.125,
+        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
+        "ModelItemsToStackSizeRatio": 1.0
+    },
+    "wildcrafttree:planks-*-ud": {
+        "Enabled": true,
+        "Comment": "Planks block pile (Wildcraft Trees planks)",
+        "MorePilesProperties": {
+            "FixPlacement": true,
+            "ForceReplaceBehavior": true,
+            "MatchesShape": "game:block/basic/cube"
+        },
+        "CtrlKey": true,
+        "UpSolid": true,
+        "BulkTransferQuantity": 4,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "PlaceRemoveSound": "game:player/build",
+        "StackingModel": "morepiles:cubepile_64",
+        "StackingTextures": null,
+        "CbScaleYByLayer": 0.125,
+        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
+        "ModelItemsToStackSizeRatio": 1.0
+    },
     "*": {
         "Enabled": true,
         "Comment": "Any blocks with simple CUBE shape",
