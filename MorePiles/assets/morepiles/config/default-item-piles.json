@@ -267,5 +267,22 @@
         // ModelItemsToStackSizeRatio info:
         // optimized - 8
         // heavy - 20
+    },
+    "snowball-*": {
+        "Enabled": true,
+        "Comment": "Snowball (vanilla)",
+        "MorePilesProperties": {
+            "FixPlacement": true,
+            "ForceReplaceBehavior": true
+        },
+        "CtrlKey": true,
+        "UpSolid": false,
+        "BulkTransferQuantity": 6,
+        "TransferQuantity": 1,
+        "StackingCapacity": 11,
+        "StackingModel": "morepiles:shapes/snowballpile-11",
+        "PlaceRemoveSound": "game:block/snow",
+        "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "cbScaleYByLayer": 0.2
     }
 }

@@ -29,6 +29,13 @@ public static class GroundStoragePatches
             => slot.TryFixGroundStoragePlacement(byEntity, blockSel, entitySel, firstEvent, ref handling);
     }
 
+    [HarmonyPatch(typeof(ItemSnowball), nameof(ItemSnowball.OnHeldInteractStart))]
+    public static class FixSnowballGroundStoragePlacementPatch
+    {
+        public static bool Prefix(ItemSlot itemslot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
+            => itemslot.TryFixGroundStoragePlacement(byEntity, blockSel, entitySel, firstEvent, ref handling);
+    }
+
     [HarmonyPatch(typeof(BlockBehaviorDecor), nameof(BlockBehaviorDecor.TryPlaceBlock))]
     public static class FixDecorPilePlacement
     {
