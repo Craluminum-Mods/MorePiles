@@ -40,6 +40,11 @@ public class Core : ModSystem
         DefaultItemPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-item-piles.json")).ToObject<Dictionary<string, DataPile>>();
         DefaultBlockPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-block-piles.json")).ToObject<Dictionary<string, DataPile>>();
         Config = ModConfig.ReadConfig<ConfigMorePiles>(api, "MorePilesConfig.json");
+
+        if (Config.AutoFill)
+        {
+            ModConfig.WriteConfig(api, "MorePilesConfig.json", Config);
+        }
     }
 
     public override void AssetsFinalize(ICoreAPI api)

@@ -32,6 +32,11 @@ public static class ModConfig
         return config;
     }
 
+    public static void WriteConfig<T>(ICoreAPI api, string jsonConfig, T config) where T : class, IModConfig
+    {
+        GenerateConfig(api, jsonConfig, config);
+    }
+
     private static T LoadConfig<T>(ICoreAPI api, string jsonConfig) where T : IModConfig
     {
         return api.LoadModConfig<T>(jsonConfig);
