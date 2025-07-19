@@ -389,6 +389,71 @@
         "ModelItemsToStackSizeRatio": 8 // each element is 20 cubes... 64 / 160 = 0.4
     },
 
+    "supportbeam-tarnishedmetal-copper": {
+        "Enabled": true,
+        "Comment": "Tarnished copper support beam (vanilla)",
+        "MorePilesProperties": {
+            "FixPlacement": true,
+            "ForceReplaceBehavior": true
+        },
+        "CtrlKey": true,
+        "UpSolid": true,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 2,
+        "StackingCapacity": 16,
+        "StackingModel": "morepiles:beampile_16",
+        "StackingTextures": {
+            "wood": "game:block/metal/tarnished/copper1"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 1
+    },
+    "supportbeam-tarnishedmetal-*": {
+        "Enabled": true,
+        "Comment": "Tarnished metal support beam (vanilla)",
+        "MorePilesProperties": {
+            "FixPlacement": true,
+            "ForceReplaceBehavior": true
+        },
+        "CtrlKey": true,
+        "UpSolid": true,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 2,
+        "StackingCapacity": 16,
+        "StackingModel": "morepiles:beampile_16",
+        "StackingTextures": {
+            "wood": "game:block/metal/tarnished/{metal}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 1
+    },
+    "supportbeam-*": {
+        "Enabled": true,
+        "Comment": "Wooden support beam (vanilla)",
+        "MorePilesProperties": {
+            "FixPlacement": true,
+            "ForceReplaceBehavior": true,
+            "MatchesShape": "game:block/wood/supportbeam/16"
+        },
+        "CtrlKey": true,
+        "UpSolid": true,
+        "BulkTransferQuantity": 8,
+        "TransferQuantity": 2,
+        "StackingCapacity": 16,
+        "StackingModel": "morepiles:beampile_16",
+        "StackingTextures": {
+            "wood": "game:block/wood/debarked/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 1
+    },
+
     // // ###################
     // // ### Cubic Piles ###
     // // ###################
