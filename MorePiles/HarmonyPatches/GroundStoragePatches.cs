@@ -40,7 +40,14 @@ public static class GroundStoragePatches
     public static class FixBeamGroundStoragePlacementPatch
     {
         public static bool Prefix(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
-            => slot.TryFixGroundStoragePlacement(byEntity, blockSel, entitySel, firstEvent, ref handling);
+        {
+            if (byEntity == null || !byEntity.Controls.ShiftKey || !byEntity.Controls.CtrlKey)
+            {
+                return true;
+            }
+
+            return slot.TryFixGroundStoragePlacement(byEntity, blockSel, entitySel, firstEvent, ref handling);
+        }
     }
 
     [HarmonyPatch(typeof(BlockBehaviorDecor), nameof(BlockBehaviorDecor.TryPlaceBlock))]

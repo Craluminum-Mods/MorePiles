@@ -389,6 +389,10 @@
         "ModelItemsToStackSizeRatio": 8 // each element is 20 cubes... 64 / 160 = 0.4
     },
 
+    // // ##################
+    // // ### Beam Piles ###
+    // // ##################
+
     "supportbeam-tarnishedmetal-copper": {
         "Enabled": true,
         "Comment": "Tarnished copper support beam (vanilla)",
