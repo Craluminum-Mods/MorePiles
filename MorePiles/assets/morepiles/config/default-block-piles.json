@@ -459,6 +459,55 @@
     },
 
     // // ###################
+    // // ### Stair Piles ###
+    // // ###################
+
+    "plankstairs-*": {
+        "Enabled": true,
+        "Comment": "Plank stairs (vanilla)",
+        "MorePilesProperties": {
+            "FixPlacement": true,
+            "ForceReplaceBehavior": true
+        },
+        "CtrlKey": true,
+        "UpSolid": true,
+        "BulkTransferQuantity": 4,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:stairpile_64",
+        "StackingTextures": {
+            "east": "game:block/wood/planks/{wood}1",
+            "south": "game:block/wood/planks/{wood}1",
+            "north": "game:block/wood/planks/{wood}1",
+            "west": "game:block/wood/planks/{wood}1",
+            "up": "game:block/wood/planks/{wood}1",
+            "down": "game:block/wood/planks/{wood}1"
+        },
+        "CbScaleYByLayer": 0.125,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 },
+        "PlaceRemoveSound": "game:block/planks",
+        "ModelItemsToStackSizeRatio": 2
+    },
+    "@.*stairs-.*": {
+        "Enabled": true,
+        "Comment": "Other stairs (vanilla)",
+        "MorePilesProperties": {
+            "FixPlacement": true,
+            "ForceReplaceBehavior": true,
+            "MatchesShape": "game:block/basic/stairs/normal"
+        },
+        "CtrlKey": true,
+        "UpSolid": true,
+        "BulkTransferQuantity": 4,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:stairpile_64",
+        "CbScaleYByLayer": 0.125,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 },
+        "ModelItemsToStackSizeRatio": 2
+    },
+
+    // // ###################
     // // ### Cubic Piles ###
     // // ###################
 
