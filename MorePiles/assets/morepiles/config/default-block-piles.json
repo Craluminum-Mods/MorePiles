@@ -507,6 +507,29 @@
         "ModelItemsToStackSizeRatio": 2
     },
 
+    // // ##################
+    // // ### Slab Piles ###
+    // // ##################
+
+    "@(.*slab.*|.*labs.*)": {
+        "Enabled": true,
+        "Comment": "Most slabs (vanilla)",
+        "MorePilesProperties": {
+            "FixPlacement": true,
+            "ForceReplaceBehavior": true,
+            "MatchesClasses": ["BlockSlabSnowRemove", "BlockRainAmbient"]
+        },
+        "CtrlKey": true,
+        "UpSolid": true,
+        "BulkTransferQuantity": 4,
+        "TransferQuantity": 1,
+        "StackingCapacity": 64,
+        "StackingModel": "morepiles:slabpile_128",
+        "CbScaleYByLayer": 0.125,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 },
+        "ModelItemsToStackSizeRatio": 2
+    },
+
     // // ###################
     // // ### Cubic Piles ###
     // // ###################
