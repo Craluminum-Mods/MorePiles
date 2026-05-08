@@ -450,7 +450,7 @@
         "StackingCapacity": 16,
         "StackingModel": "morepiles:beampile_16",
         "StackingTextures": {
-            "wood": "game:block/wood/debarked/{wood}"
+            "wood": "game:block/wood/treetrunk/{wood}"
         },
         "CbScaleYByLayer": 0.25,
         "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
@@ -547,12 +547,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
-        "StackingModel": "morepiles:cubelogpile_64",
-        "CbScaleYByLayer": 0.125, // 8 / StackingCapacity,
-        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 },
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "ModelItemsToStackSizeRatio": 1 // should be 64 / StackingCapacity = 1
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
 
     "wildcrafttree:log-*-ud": {
@@ -568,13 +572,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "wildcrafttree:debarkedlog-*-ud": {
         "Enabled": true,
@@ -589,13 +596,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 58,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "wildcrafttree:planks-*-ud": {
         "Enabled": true,
@@ -631,13 +641,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonescaperegion:debarkedlog-*-ud": {
         "Enabled": true,
@@ -652,13 +665,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonescaperegion:planks-*": {
         "Enabled": true,
@@ -694,13 +710,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonescaribbeanregion:debarkedlog-*-ud": {
         "Enabled": true,
@@ -715,13 +734,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonescaribbeanregion:planks-*": {
         "Enabled": true,
@@ -757,13 +779,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonescentralaustralianregion:debarkedlog-*-ud": {
         "Enabled": true,
@@ -778,13 +803,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonescentralaustralianregion:planks-*": {
         "Enabled": true,
@@ -820,13 +848,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonescosmopolitanregion:debarkedlog-*-ud": {
         "Enabled": true,
@@ -841,13 +872,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonescosmopolitanregion:planks-*": {
         "Enabled": true,
@@ -883,13 +917,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzoneseastasiaticregion:debarkedlog-*-ud": {
         "Enabled": true,
@@ -904,13 +941,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzoneseastasiaticregion:planks-*": {
         "Enabled": true,
@@ -946,13 +986,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonesmediterraneanregion:debarkedlog-*-ud": {
         "Enabled": true,
@@ -967,13 +1010,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonesmediterraneanregion:planks-*": {
         "Enabled": true,
@@ -1009,13 +1055,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonesneozeylandicregion:debarkedlog-*-ud": {
         "Enabled": true,
@@ -1030,13 +1079,16 @@
         "UpSolid": true,
         "BulkTransferQuantity": 4,
         "TransferQuantity": 1,
-        "StackingCapacity": 64,
+        "StackingCapacity": 16,
         "PlaceRemoveSound": "game:block/planks",
-        "StackingModel": "morepiles:cubelogpile_64",
-        "StackingTextures": null,
-        "CbScaleYByLayer": 0.125,
-        "CollisionBox": { "X1": 0.0, "Y1": 0.0, "Z1": 0.0, "X2": 1.0, "Y2": 0.125, "Z2": 1.0 },
-        "ModelItemsToStackSizeRatio": 1.0
+        "StackingModel": "morepiles:logpile_48",
+        "StackingTextures": {
+            "oak-h": "game:block/wood/bark/{wood}-h",
+            "oak": "game:block/wood/treetrunk/{wood}"
+        },
+        "CbScaleYByLayer": 0.25,
+        "CollisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 },
+        "CuboidsPerModel": 3
     },
     "floralzonesneozeylandicregion:planks-*": {
         "Enabled": true,
