@@ -23,23 +23,26 @@ public class GroundStoragePropertiesExtended : GroundStorageProperties
         return new GroundStoragePropertiesExtended
         {
             MorePilesProperties = MorePilesProperties?.Clone(),
+
             Layout = Layout,
             WallOffY = WallOffY,
             PlaceRemoveSound = PlaceRemoveSound?.Clone(),
             RandomizeSoundPitch = RandomizeSoundPitch,
-            StackingCapacity = StackingCapacity,
+            RandomizeCenterRotation = RandomizeCenterRotation,
             StackingModel = StackingModel?.Clone(),
+            CuboidsPerModel = CuboidsPerModel,
+            ItemsPerModel = ItemsPerModel,
+            StackingCapacity = StackingCapacity,
             StackingTextures = StackingTextures?.ToDictionary(x => x.Key, x => x.Value.Clone()),
             MaxStackingHeight = MaxStackingHeight,
             TransferQuantity = TransferQuantity,
             BulkTransferQuantity = BulkTransferQuantity,
-            CollisionBox = CollisionBox?.Clone(),
-            SelectionBox = SelectionBox?.Clone(),
+            CollisionBox = CollisionBox,
+            SelectionBox = SelectionBox,
             CbScaleYByLayer = CbScaleYByLayer,
             MaxFireable = MaxFireable,
             CtrlKey = CtrlKey,
-            UpSolid = UpSolid,
-            ModelItemsToStackSizeRatio = ModelItemsToStackSizeRatio
+            UpSolid = UpSolid
         };
     }
 }

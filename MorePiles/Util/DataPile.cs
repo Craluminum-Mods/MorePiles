@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.GameContent;
@@ -36,7 +37,11 @@ public class DataPile
 
     public CuboidfExtended CollisionBox { get; set; } = new CuboidfExtended();
 
-    public float? ModelItemsToStackSizeRatio { get; set; }
+    public float ModelItemsToStackSizeRatio { get; set; } = 1;
+
+    public int CuboidsPerModel { get; set; } = 1;
+
+    public int ItemsPerModel { get; set; } = 1;
 
     public int GetShapeElementCount(ICoreAPI api)
     {
@@ -48,24 +53,25 @@ public class DataPile
 
     public GroundStoragePropertiesExtended GetProps(ICoreAPI api)
     {
-        float modelItemsToStackSizeRatio = ModelItemsToStackSizeRatio == null ? (float)GetShapeElementCount(api) / (float)StackingCapacity : (float)ModelItemsToStackSizeRatio;
-
         return new GroundStoragePropertiesExtended()
         {
             MorePilesProperties = MorePilesProperties,
 
             Layout = EnumGroundStorageLayout.Stacking,
+
+            PlaceRemoveSound = PlaceRemoveSound?.Clone(),
+            StackingModel = StackingModel?.Clone(),
+            CuboidsPerModel = CuboidsPerModel,
+            ItemsPerModel = ItemsPerModel,
+            StackingCapacity = StackingCapacity,
+            StackingTextures = StackingTextures?.ToDictionary(x => x.Key, x => x.Value.Clone()),
+            TransferQuantity = TransferQuantity,
+            BulkTransferQuantity = BulkTransferQuantity,
+            CollisionBox = CollisionBox.Convert(),
+            CbScaleYByLayer = CbScaleYByLayer,
             CtrlKey = CtrlKey,
             UpSolid = UpSolid,
-            BulkTransferQuantity = BulkTransferQuantity,
-            TransferQuantity = TransferQuantity,
-            StackingCapacity = StackingCapacity,
-            PlaceRemoveSound = PlaceRemoveSound,
-            StackingModel = StackingModel,
-            StackingTextures = StackingTextures,
-            CbScaleYByLayer = CbScaleYByLayer,
-            CollisionBox = CollisionBox.Convert(),
-            ModelItemsToStackSizeRatio = modelItemsToStackSizeRatio
+            ModelItemsToStackSizeRatio = ModelItemsToStackSizeRatio
         };
     }
 
