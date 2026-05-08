@@ -248,7 +248,7 @@
         "PlaceRemoveSound": "game:block/ingot",
         "ModelItemsToStackSizeRatio": 3 // should be 160 / StackingCapacity = 2.5
     },
-    "ladder-wood-north": {
+    "ladder-wood-*-north": {
         "Enabled": true,
         "Comment": "Wooden ladder (vanilla)",
         "MorePilesProperties": {
