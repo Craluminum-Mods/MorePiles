@@ -32,11 +32,6 @@ public class Core : ModSystem
 
     public override void AssetsLoaded(ICoreAPI api)
     {
-        if (!api.Side.IsServer())
-        {
-            return;
-        }
-
         DefaultItemPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-item-piles.json")).ToObject<Dictionary<string, DataPile>>();
         DefaultBlockPiles = api.Assets.Get(new AssetLocation("morepiles:config/default-block-piles.json")).ToObject<Dictionary<string, DataPile>>();
         Config = ModConfig.ReadConfig<ConfigMorePiles>(api, "MorePilesConfig.json");
@@ -49,12 +44,6 @@ public class Core : ModSystem
 
     public override void AssetsFinalize(ICoreAPI api)
     {
-        if (!api.Side.IsServer())
-        {
-            Mod.Logger.Event("started '{0}' mod", Mod.Info.Name);
-            return;
-        }
-
         long elapsedMilliseconds = api.World.ElapsedMilliseconds;
 
         Dictionary<string, GroundStoragePropertiesExtended> items = DataPile.GetPropsFromAll(api, Config.ItemPiles);
