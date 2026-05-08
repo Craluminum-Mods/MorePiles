@@ -2,8 +2,8 @@
     "type": "code",
     "modid": "morepiles",
     "name": "More Piles",
-    "version": "3.0.0",
-    "authors": ["Craluminum2413"],
+    "version": "3.0.1",
+    "authors": ["Craluminum2413 (Dana)"],
     "contributors": ["Apache", "rar61"],
     "dependencies": {
         "game": "1.22.0"
